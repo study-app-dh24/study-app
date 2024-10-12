@@ -1,3 +1,5 @@
+import Profile from "./components/profile";
+
 export default function Home() {
   return (
     // TODO: Change colors if needed
@@ -14,7 +16,7 @@ export default function Home() {
       </div>
 
       <div className="ml-auto pr-8">
-        [name] [pfp]
+        <Profile />
       </div>
     </div>
   );
