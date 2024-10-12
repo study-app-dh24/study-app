@@ -4,7 +4,6 @@ export default function Home() {
   return (
     // TODO: Change colors if needed
     <div className="bg-dark_purple flex h-12 w-full items-center">
-
       <div className="mr-auto pl-8">
         [logo] [app_name]
       </div>
