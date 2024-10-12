@@ -11,9 +11,16 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        dark_purple: "#39275B",
+        light_purple: "#A18BD1",
+        salmon: "#FF6B6B",
+        silk: "#F2F2F2",
+        carbon: "#333333",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 };
 export default config;
