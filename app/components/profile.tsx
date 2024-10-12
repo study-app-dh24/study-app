@@ -46,17 +46,8 @@ export default function Profile() {
         <ModalContent className="bg-silk rounded-3xl border-solid border-black border-2 text-black">
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 text-black"> Edit Profile </ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 text-black text-lg font-bold"> Edit Profile </ModalHeader>
               <ModalBody className="text-black flex relative">
-                    <Input
-                      className="text-left"
-                      id="input-box"
-                      size="lg"
-                      radius="lg"
-                      label="email"
-                      type="email"
-                      placeholder="you@example.com"
-                    />
               </ModalBody>
 
               <ModalFooter>

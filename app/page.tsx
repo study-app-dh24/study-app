@@ -1,16 +1,10 @@
 import Profile from "./components/profile";
-import {Modal, ModalContent, ModalHeader, ModalBody, Button, ModalFooter, useDisclosure, Input} from "@nextui-org/react";
 
 export default function Home() {
   return (
     // TODO: Change colors if needed
-    <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
-    <Input type="email" label="Email" />
-    <Input type="email" label="Email" placeholder="Enter your email" />
-  </div>
-
-  
-      /* <div className="mr-auto pl-8">
+    <div className="bg-dark_purple flex h-12 w-full items-center">
+      <div className="mr-auto pl-8">
         [logo] [app_name]
       </div>
 
@@ -22,7 +16,7 @@ export default function Home() {
 
       <div className="ml-auto pr-8">
         <Profile />
-      </div> */
-    // </div>
+      </div>
+    </div>
   );
 }
