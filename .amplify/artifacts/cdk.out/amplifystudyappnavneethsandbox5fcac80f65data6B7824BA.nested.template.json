@@ -67,7 +67,7 @@
       "ApiId"
      ]
     },
-    "Expires": 1731366860
+    "Expires": 1731369399
    },
    "Metadata": {
     "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/data/amplifyData/GraphQLAPI/DefaultApiKey"
