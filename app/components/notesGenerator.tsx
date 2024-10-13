@@ -3,6 +3,7 @@
 // components/NotesGenerator.tsx
 import { useState } from 'react';
 import axios from 'axios';
+import { marked } from 'marked'; // Import the marked library
 
 interface NotesGeneratorProps {
   topics: string[]; // Define the props interface for topics
@@ -92,10 +93,16 @@ const NotesGenerator: React.FC<NotesGeneratorProps> = ({ topics }) => {
               border: '1px solid #ddd', 
               borderRadius: '10px', 
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-              backgroundColor: '#fff' // Card background color
+              backgroundColor: '#fff', // Card background color
+              maxHeight: '300px', // Set a max height for the note box
+              overflowY: 'auto', // Allow vertical scrolling if content overflows
+              wordWrap: 'break-word', // Break long words
             }}>
               <h3 style={{ fontSize: '1.5em', color: '#333' }}>{topic}</h3>
-              <p style={{ color: '#555', lineHeight: '1.5' }}>{content}</p>
+              <div 
+                style={{ color: '#555', lineHeight: '1.5' }} 
+                dangerouslySetInnerHTML={{ __html: marked(content || '') }} // Convert markdown to HTML
+              />
             </div>
           ))}
         </div>
