@@ -3,9 +3,11 @@
 import React, { useEffect, useState } from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, Button, ModalFooter, useDisclosure, Dropdown, DropdownItem, DropdownTrigger, DropdownMenu } from "@nextui-org/react";
 // import { TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Avatar} from "@mui/material";
-import { TextField, Avatar } from "@mui/material";
+import { TextField } from "@mui/material";
 import { signOut } from 'aws-amplify/auth';
 import { fetchUserAttributes, updateUserAttributes } from 'aws-amplify/auth';
+import placeholderImg from '@/app/public/placeholder-pfp.svg';
+import Image from "next/image";
 
 interface AuthUser {
   userId?: string;
@@ -96,11 +98,10 @@ function Profile({ user }: ProfileProps) {
       <div> {attributes.name} </div>
         <Dropdown className="bg-carbon rounded-xl">
         <DropdownTrigger>
-          <Avatar
-            className="w-5/6 h-8 text-lg hover:cursor-pointer hover:scale-110"
+          <Image
+            className="w-8 h-8 text-lg hover:cursor-pointer hover:scale-110"
             alt=''
-            // TODO: Insert pfp
-            sx={{ width: 24, height: 24 }}
+            src={placeholderImg}
           />
         </DropdownTrigger>
         <DropdownMenu>
@@ -117,13 +118,11 @@ function Profile({ user }: ProfileProps) {
 
               <ModalBody className="text-black flex relative items-center">
                 <div className="flex-shrink-0 mb-4 relative">
-                  <Avatar
-                    className="w-48 h-48 mr-4 hover:cursor-pointer"
-                    alt=""
-                    onClick={pictureChange}
-                    // TODO: Insert pfp
-                    sx={{ width: 64, height: 64 }}
-                  />
+                <Image
+                  className="w-24 h-24 text-lg hover:cursor-pointer hover:cursor-pointer"
+                  alt=''
+                  src={placeholderImg}
+                />
                 </div>
                 <div className="flex flex-col gap-4 w-full">
                   <TextField label="Name" value={name} variant="outlined" onChange={nameChange}/>
