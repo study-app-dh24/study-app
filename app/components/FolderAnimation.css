@@ -1,0 +1,28 @@
+.folder-container {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+}
+
+.icon {
+  transition: all 0.2s ease-in-out;
+  width: 220px;
+  height: 220px;
+}
+
+.folder-closed,
+.folder-open {
+  transition: all 0.2s ease-in-out;
+}
+
+.closed .folder-open {
+  opacity: 0;
+}
+
+.open .folder-closed {
+  opacity: 0;
+}
+
+.open {
+  transform: scale(1.1);
+}

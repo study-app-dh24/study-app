@@ -5,6 +5,7 @@ interface CustomUser extends Omit<UserType, 'Attributes'> {
   Attributes?: { Name: string; Value: string }[]; // Adjust this as per the returned type
   fullName?: string;
   website?: string;
+  picture?: string;
 }
 
 import React, { useState, useEffect } from 'react';
@@ -56,13 +57,11 @@ const UserList: React.FC = () => {
           Attributes: user.Attributes,
           fullName: attributes?.['name'] || 'N/A',
           website: attributes?.['website'] || 'N/A',
+          picture: attributes?.['custom:picture'] || 'http://www.gravatar.com/avatar/?d=mp',
         } as CustomUser; // Type assertion here
       });
 
-      // TODO: remove (for debugging)
-      const duplicateUsers = transformedUsers.concat(transformedUsers).concat(transformedUsers).concat(transformedUsers).concat(transformedUsers).concat(transformedUsers);
-      // setUsers(transformedUsers);
-      setUsers(duplicateUsers);
+      setUsers(transformedUsers);
     } catch (error) {
       console.error('Error listing users:', error);
     }
@@ -85,7 +84,7 @@ const UserList: React.FC = () => {
               </Link>
             }
             avatarProps={{
-              src: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+              src: user.picture,
             }}
           />
         </div>

@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 import { nextui } from '@nextui-org/theme';
 
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -22,6 +24,9 @@ const config: Config = {
         beige: "#cac7c7"
       },
     },
+    fontFamily: {
+      viga: ['"Viga"', ...defaultTheme.fontFamily.sans],
+    }
   },
   plugins: [
     require('@tailwindcss/forms'),

@@ -95,7 +95,7 @@ function Profile() {
   return (
     <>
     <div className="flex flex-row items-center gap-2">
-      <div className="text-lg"> {attributes?.name} </div>
+      <div className="text-xl"> {attributes?.name} </div>
         <Dropdown className="bg-carbon rounded-xl">
         <DropdownTrigger>
           <Image
