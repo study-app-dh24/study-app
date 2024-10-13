@@ -62,18 +62,40 @@ const NotesGenerator: React.FC<NotesGeneratorProps> = ({ topics }) => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <button onClick={handleGenerateNotes} disabled={loading}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
+      <button 
+        onClick={handleGenerateNotes} 
+        disabled={loading}
+        style={{
+          padding: '10px 20px',
+          fontSize: '16px',
+          color: '#fff',
+          backgroundColor: '#007BFF',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: loading ? 'not-allowed' : 'pointer',
+          transition: 'background-color 0.3s ease',
+        }}
+        onMouseOver={(e) => e.currentTarget.style.backgroundColor = loading ? '#007BFF' : '#0056b3'}
+        onMouseOut={(e) => e.currentTarget.style.backgroundColor = loading ? '#007BFF' : '#007BFF'}
+      >
         {loading ? 'Generating...' : 'Create Notes'}
       </button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p style={{ color: 'red', fontWeight: 'bold', textAlign: 'center' }}>{error}</p>}
       {Object.entries(notes).length > 0 && (
-        <div>
-          <h2>Generated Notes:</h2>
+        <div style={{ marginTop: '20px', width: '100%' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '10px' }}>Generated Notes:</h2>
           {Object.entries(notes).map(([topic, content]) => (
-            <div key={topic} style={{ marginBottom: '20px' }}>
-              <h3>{topic}</h3>
-              <p>{content}</p>
+            <div key={topic} style={{ 
+              marginBottom: '20px', 
+              padding: '15px', 
+              border: '1px solid #ddd', 
+              borderRadius: '10px', 
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              backgroundColor: '#fff' // Card background color
+            }}>
+              <h3 style={{ fontSize: '1.5em', color: '#333' }}>{topic}</h3>
+              <p style={{ color: '#555', lineHeight: '1.5' }}>{content}</p>
             </div>
           ))}
         </div>

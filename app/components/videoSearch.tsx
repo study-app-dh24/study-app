@@ -54,13 +54,20 @@ const VideoSearch: React.FC<VideoSearchProps> = ({ topics }) => {
     }, [topics]); // Run this effect when topics change
 
     return (
-        <div>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+        <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
+            {error && <p style={{ color: 'red', fontWeight: 'bold', textAlign: 'center' }}>{error}</p>}
             <div>
                 {videos.length > 0 ? (
                     videos.map((video) => (
-                        <div key={video.id.videoId} style={{ marginBottom: '20px' }}>
-                            <h3 style={{alignItems:'center'}}>{video.snippet.title}</h3>
+                        <div key={video.id.videoId} style={{ 
+                            marginBottom: '20px', 
+                            padding: '15px', 
+                            border: '1px solid #ddd', 
+                            borderRadius: '10px', 
+                            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                            backgroundColor: '#fff' // Card background color
+                        }}>
+                            <h3 style={{ textAlign: 'center', fontSize: '1.5em', color: '#333' }}>{video.snippet.title}</h3>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <iframe
                                     width="560"
@@ -70,13 +77,13 @@ const VideoSearch: React.FC<VideoSearchProps> = ({ topics }) => {
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
-                                    style={{ borderRadius: '15px' }} // Removed justifyContent from iframe style
+                                    style={{ borderRadius: '15px', marginTop: '10px' }} // Spacing for iframe
                                 ></iframe>
                             </div>
                         </div>
                     ))
                 ) : (
-                    <p>No videos found for the given topics.</p>
+                    <p style={{ textAlign: 'center', color: '#666' }}>No videos found for the given topics.</p>
                 )}
             </div>
         </div>
