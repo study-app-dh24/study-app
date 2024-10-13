@@ -7,18 +7,18 @@ export const auth = defineAuth({
     // phone: true
   },
   userAttributes: {
-    website: {
-      mutable: true,
-      required: true,
-    },
-    fullname: {
-      mutable: true,
-      required: true,
-    },
-    // Add your custom attributes here
-    'custom:privacy': {
-      mutable: true,
-      dataType: 'String'
-    },
+    // website: {
+    //   mutable: true,
+    //   required: true,
+    // },
+    // fullname: {
+    //   mutable: true,
+    //   required: true,
+    // },
+    // // Add your custom attributes here
+    // 'custom:privacy': {
+    //   mutable: true,
+    //   dataType: 'String'
+    // },
   }
 });

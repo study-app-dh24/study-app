@@ -72,22 +72,6 @@
                                 "name": "email",
                                 "mutable": true,
                                 "required": true
-                              },
-                              {
-                                "name": "website",
-                                "mutable": true,
-                                "required": true
-                              },
-                              {
-                                "name": "name",
-                                "mutable": true,
-                                "required": true
-                              },
-                              {
-                                "name": "privacy",
-                                "attributeDataType": "String",
-                                "stringAttributeConstraints": {},
-                                "mutable": true
                               }
                             ],
                             "smsVerificationMessage": "The verification code to your new account is {####}",
@@ -521,7 +505,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/6052fdbd111148faba89b6c7c8ac6221f3a78ee6ffa044781d95b45230efa48c.json"
+                          "/7f9e5a4c92bd2cd17a838f8641638ec1aa409fd79750e07353f8327de863ceda.json"
                         ]
                       ]
                     }
