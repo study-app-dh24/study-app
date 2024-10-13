@@ -40,7 +40,7 @@ const UserList: React.FC = () => {
       });
 
       const command = new ListUsersCommand({
-        UserPoolId: 'us-east-2_QNU7Mq4pg',
+        UserPoolId: process.env.USER_POOL_ID as string,
         Limit: 60
       });
 
