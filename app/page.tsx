@@ -111,13 +111,13 @@ export default function Home() {
           <PeerConnect />
         </div>
       </div>
-      <FileUploader
+      {/* <FileUploader
       acceptedFileTypes={['image/*']}
       path="public/"
       maxFileCount={1}
       isResumable
       onUploadSuccess={handleUploadSuccess}
-    />
+    /> */}
 
       {/* <VideoSearch /> */}
       {/* <NotesGenerator /> */}
