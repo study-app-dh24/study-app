@@ -1,9 +1,9 @@
 {
   "auth": {
-    "user_pool_id": "us-east-2_r1S7BJCo4",
+    "user_pool_id": "us-east-2_cBsFWJSn8",
     "aws_region": "us-east-2",
-    "user_pool_client_id": "cofpuvlqfp6s43vkfi2pldf4c",
-    "identity_pool_id": "us-east-2:dd2bc70a-2ee2-43ee-a00d-66e217557bc5",
+    "user_pool_client_id": "anttme81i6ojc3ps4vg1ei2tl",
+    "identity_pool_id": "us-east-2:3869479c-bdac-45aa-a2ae-0f04fd8b6a56",
     "mfa_methods": [],
     "standard_required_attributes": [
       "email"
@@ -25,9 +25,9 @@
     "unauthenticated_identities_enabled": true
   },
   "data": {
-    "url": "https://3zvtvfry3nhs5fsolyb3dgk3ee.appsync-api.us-east-2.amazonaws.com/graphql",
+    "url": "https://dffxou4vdjhxpntqw22dfvga2y.appsync-api.us-east-2.amazonaws.com/graphql",
     "aws_region": "us-east-2",
-    "api_key": "da2-dp2mqqrkfzgrreioa3lv4yz7d4",
+    "api_key": "da2-gz2tzzhrz5errblomd76p5zyc4",
     "default_authorization_type": "API_KEY",
     "authorization_types": [
       "AMAZON_COGNITO_USER_POOLS",
@@ -115,12 +115,40 @@
   },
   "storage": {
     "aws_region": "us-east-2",
-    "bucket_name": "amplify-studyapp-williamo-amplifyteamdrivebucket28-pbbrch8gqjnb",
+    "bucket_name": "amplify-studyapp-navneeth-amplifyteamdrivebucket28-deeuzalzmsnz",
     "buckets": [
       {
         "name": "amplifyTeamDrive",
-        "bucket_name": "amplify-studyapp-williamo-amplifyteamdrivebucket28-pbbrch8gqjnb",
-        "aws_region": "us-east-2"
+        "bucket_name": "amplify-studyapp-navneeth-amplifyteamdrivebucket28-deeuzalzmsnz",
+        "aws_region": "us-east-2",
+        "paths": {
+          "profile-pictures/*": {
+            "guest": [
+              "get",
+              "list"
+            ]
+          },
+          "profile-pictures/${cognito-identity.amazonaws.com:sub}/*": {
+            "entityidentity": [
+              "get",
+              "list",
+              "write",
+              "delete"
+            ]
+          },
+          "picture-submissions/*": {
+            "authenticated": [
+              "get",
+              "list",
+              "write"
+            ],
+            "guest": [
+              "get",
+              "list",
+              "write"
+            ]
+          }
+        }
       }
     ]
   },

@@ -23,7 +23,7 @@
         "notificationArns": [],
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/60143981aa7bd8f9cc12a4efeaa3e3e00c7d93834155ec86cc223d4debac2592.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/305f024f4b0e8abcadfe44eb3641f85d034738676cfe8c61d588d8b6cfec0ae6.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -1158,6 +1158,24 @@
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
           }
         ],
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/AMPLIFY_TEAM_DRIVE_BUCKET_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYTEAMDRIVEBUCKETNAMEParameterA8101723"
+          }
+        ],
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/storageAccess4/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storageAccess472A5D2AC"
+          }
+        ],
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/storageAccess5/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storageAccess524979CAB"
+          }
+        ],
         "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
@@ -1168,6 +1186,18 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref"
+          }
+        ],
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef"
           }
         ],
         "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/amplifystudyappnavneethsandbox5fcac80f65storageamplifyTeamDriveBucketED6A22CFRef": [

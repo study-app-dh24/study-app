@@ -1,11 +1,14 @@
 'use client'
 
-import { useEffect } from "react";
+import { useEffect, } from "react";
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import { Amplify } from 'aws-amplify';
 import outputs from "../amplify_outputs.json";
 import Profile from "./components/profile";
+import { FileUploader } from '@aws-amplify/ui-react-storage';
+import '@aws-amplify/ui-react/styles.css';
+import { View } from "@aws-amplify/ui-react";
 
 const configureAmplify = () => {
   Amplify.configure(outputs);
@@ -18,7 +21,8 @@ export default function Home() {
   }, []);
 
   return (
-    <Authenticator>
+    <View>
+          <Authenticator>
       {({ signOut, user }) => (
         <main>
             {/* TODO: Change colors if needed */}
@@ -42,5 +46,15 @@ export default function Home() {
         </main>
       )}
     </Authenticator>
+
+      <FileUploader
+        acceptedFileTypes={['image/*']}
+        path="public/"
+        maxFileCount={1}
+        isResumable
+      />
+
+    </View>
+  
   );
 }

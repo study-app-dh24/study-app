@@ -782,7 +782,7 @@
                                 "ApiId"
                               ]
                             },
-                            "expires": 1731369399
+                            "expires": 1731371909
                           }
                         },
                         "constructInfo": {
@@ -5533,7 +5533,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/adcabe83e611a906bc5fa6f0a2158480ee94ad02a376e961d8b54d2153cb7167.json"
+                          "/8829b59c393b7e5a844840d1059ae3466951a6362cd02bae80b37f6b879c6715.json"
                         ]
                       ]
                     }
@@ -5851,6 +5851,284 @@
                   "version": "2.162.1"
                 }
               },
+              "AMPLIFY_TEAM_DRIVE_BUCKET_NAMEParameter": {
+                "id": "AMPLIFY_TEAM_DRIVE_BUCKET_NAMEParameter",
+                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/AMPLIFY_TEAM_DRIVE_BUCKET_NAMEParameter",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/AMPLIFY_TEAM_DRIVE_BUCKET_NAMEParameter/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "name": "/amplify/resource_reference/studyapp/navneeth-sandbox-5fcac80f65/AMPLIFY_TEAM_DRIVE_BUCKET_NAME",
+                        "tags": {
+                          "amplify:deployment-type": "sandbox",
+                          "created-by": "amplify"
+                        },
+                        "type": "String",
+                        "value": {
+                          "Ref": "amplifyTeamDriveBucket28B5C701"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ssm.CfnParameter",
+                      "version": "2.162.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ssm.StringParameter",
+                  "version": "2.162.1"
+                }
+              },
+              "storageAccess4": {
+                "id": "storageAccess4",
+                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/storageAccess4",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/storageAccess4/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "s3:GetObject",
+                              "Effect": "Allow",
+                              "Resource": [
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "amplifyTeamDriveBucket28B5C701",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/profile-pictures/*"
+                                    ]
+                                  ]
+                                },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "amplifyTeamDriveBucket28B5C701",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/picture-submissions/*"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Action": "s3:ListBucket",
+                              "Condition": {
+                                "StringLike": {
+                                  "s3:prefix": [
+                                    "profile-pictures/*",
+                                    "profile-pictures/",
+                                    "picture-submissions/*",
+                                    "picture-submissions/"
+                                  ]
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "amplifyTeamDriveBucket28B5C701",
+                                  "Arn"
+                                ]
+                              }
+                            },
+                            {
+                              "Action": "s3:PutObject",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "amplifyTeamDriveBucket28B5C701",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "/picture-submissions/*"
+                                  ]
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "storageAccess472A5D2AC",
+                        "roles": [
+                          {
+                            "Ref": "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                      "version": "2.162.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Policy",
+                  "version": "2.162.1"
+                }
+              },
+              "storageAccess5": {
+                "id": "storageAccess5",
+                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/storageAccess5",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/storageAccess5/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "s3:GetObject",
+                              "Effect": "Allow",
+                              "Resource": [
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "amplifyTeamDriveBucket28B5C701",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/profile-pictures/${cognito-identity.amazonaws.com:sub}/*"
+                                    ]
+                                  ]
+                                },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "amplifyTeamDriveBucket28B5C701",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/picture-submissions/*"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Action": "s3:ListBucket",
+                              "Condition": {
+                                "StringLike": {
+                                  "s3:prefix": [
+                                    "profile-pictures/${cognito-identity.amazonaws.com:sub}/*",
+                                    "profile-pictures/${cognito-identity.amazonaws.com:sub}/",
+                                    "picture-submissions/*",
+                                    "picture-submissions/"
+                                  ]
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "amplifyTeamDriveBucket28B5C701",
+                                  "Arn"
+                                ]
+                              }
+                            },
+                            {
+                              "Action": "s3:PutObject",
+                              "Effect": "Allow",
+                              "Resource": [
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "amplifyTeamDriveBucket28B5C701",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/profile-pictures/${cognito-identity.amazonaws.com:sub}/*"
+                                    ]
+                                  ]
+                                },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "amplifyTeamDriveBucket28B5C701",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/picture-submissions/*"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Action": "s3:DeleteObject",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "amplifyTeamDriveBucket28B5C701",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "/profile-pictures/${cognito-identity.amazonaws.com:sub}/*"
+                                  ]
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "storageAccess524979CAB",
+                        "roles": [
+                          {
+                            "Ref": "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                      "version": "2.162.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Policy",
+                  "version": "2.162.1"
+                }
+              },
               "CDKMetadata": {
                 "id": "CDKMetadata",
                 "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/CDKMetadata",
@@ -5877,6 +6155,22 @@
                   "version": "10.4.1"
                 }
               },
+              "reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref": {
+                "id": "reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref",
+                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnParameter",
+                  "version": "2.162.1"
+                }
+              },
+              "reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef": {
+                "id": "reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef",
+                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnParameter",
+                  "version": "2.162.1"
+                }
+              },
               "amplifystudyappnavneethsandbox5fcac80f65storageamplifyTeamDriveBucketED6A22CFRef": {
                 "id": "amplifystudyappnavneethsandbox5fcac80f65storageamplifyTeamDriveBucketED6A22CFRef",
                 "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/amplifystudyappnavneethsandbox5fcac80f65storageamplifyTeamDriveBucketED6A22CFRef",
@@ -5901,6 +6195,20 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CloudFormation::Stack",
                   "aws:cdk:cloudformation:props": {
+                    "parameters": {
+                      "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref": {
+                        "Fn::GetAtt": [
+                          "auth179371D7",
+                          "Outputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref"
+                        ]
+                      },
+                      "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef": {
+                        "Fn::GetAtt": [
+                          "auth179371D7",
+                          "Outputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef"
+                        ]
+                      }
+                    },
                     "tags": [
                       {
                         "key": "amplify:deployment-type",
@@ -5927,7 +6235,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/60db8a74fadc4dee89d8e7e7043d0cd36b4717587733a80359a35a8b7282e8ab.json"
+                          "/bd2b6bea93b349014d14e3c738e991b8b9af6af8d8a9df8541ad58eeb62d4d03.json"
                         ]
                       ]
                     }
