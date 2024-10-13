@@ -1,7 +1,6 @@
 import Header from "@/app/components/header";
 import VideoSearch from "@/app/components/videoSearch";
 import NotesGenerator from "@/app/components/notesGenerator";
-import { View } from "@aws-amplify/ui-react";
 export default function P() {
   return (
     // <View>
