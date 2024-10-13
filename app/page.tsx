@@ -14,7 +14,6 @@ const configureAmplify = () => {
   Amplify.configure(outputs);
 };
 
-
 export default function Home() {
   useEffect(() => {
     configureAmplify();
@@ -41,8 +40,6 @@ export default function Home() {
               <Profile />
             </div>
           </div>
-          <h1>Hello {user?.username}</h1>
-          <button onClick={signOut}>Sign out</button>
         </main>
       )}
     </Authenticator>
