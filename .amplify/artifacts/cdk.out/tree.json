@@ -72,6 +72,22 @@
                                 "name": "email",
                                 "mutable": true,
                                 "required": true
+                              },
+                              {
+                                "name": "website",
+                                "mutable": true,
+                                "required": true
+                              },
+                              {
+                                "name": "name",
+                                "mutable": true,
+                                "required": true
+                              },
+                              {
+                                "name": "privacy",
+                                "attributeDataType": "String",
+                                "stringAttributeConstraints": {},
+                                "mutable": true
                               }
                             ],
                             "smsVerificationMessage": "The verification code to your new account is {####}",
@@ -505,7 +521,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/7f9e5a4c92bd2cd17a838f8641638ec1aa409fd79750e07353f8327de863ceda.json"
+                          "/6052fdbd111148faba89b6c7c8ac6221f3a78ee6ffa044781d95b45230efa48c.json"
                         ]
                       ]
                     }
@@ -1120,15 +1136,15 @@
               },
               "SECOND_BUCKET_BUCKET_NAMEParameter": {
                 "id": "SECOND_BUCKET_BUCKET_NAMEParameter",
-                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/SECOND_BUCKET_BUCKET_NAMEParameter",
+                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/SECOND_BUCKET_BUCKET_NAMEParameter",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/SECOND_BUCKET_BUCKET_NAMEParameter/Resource",
+                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/SECOND_BUCKET_BUCKET_NAMEParameter/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/amplify/resource_reference/studyapp/williamong-sandbox-0bf4552c6e/SECOND_BUCKET_BUCKET_NAME",
+                        "name": "/amplify/resource_reference/studyapp/navneeth-sandbox-5fcac80f65/SECOND_BUCKET_BUCKET_NAME",
                         "tags": {
                           "amplify:deployment-type": "sandbox",
                           "created-by": "amplify"
@@ -1152,11 +1168,11 @@
               },
               "storageAccess5": {
                 "id": "storageAccess5",
-                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/storageAccess5",
+                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/storageAccess5",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/storageAccess5/Resource",
+                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/storageAccess5/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                       "aws:cdk:cloudformation:props": {
@@ -1240,7 +1256,7 @@
                         "policyName": "storageAccess524979CAB",
                         "roles": [
                           {
-                            "Ref": "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef"
+                            "Ref": "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef"
                           }
                         ]
                       }

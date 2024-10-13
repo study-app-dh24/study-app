@@ -1,19 +1,19 @@
 {
   "version": "38.0.1",
   "artifacts": {
-    "amplify-studyapp-williamong-sandbox-0bf4552c6e.assets": {
+    "amplify-studyapp-navneeth-sandbox-5fcac80f65.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "amplify-studyapp-williamong-sandbox-0bf4552c6e.assets.json",
+        "file": "amplify-studyapp-navneeth-sandbox-5fcac80f65.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "amplify-studyapp-williamong-sandbox-0bf4552c6e": {
+    "amplify-studyapp-navneeth-sandbox-5fcac80f65": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "amplify-studyapp-williamong-sandbox-0bf4552c6e.template.json",
+        "templateFile": "amplify-studyapp-navneeth-sandbox-5fcac80f65.template.json",
         "terminationProtection": false,
         "tags": {
           "amplify:deployment-type": "sandbox",
@@ -23,11 +23,11 @@
         "notificationArns": [],
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/40a89963f2de6c9c75fa6301a953323dbef8bbee0faee18bce13235a9eda200f.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/5d5a1c48004a556dfef5e0251b5f9fc12e2b7af43e0e9db4503e2c762d732f6e.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "amplify-studyapp-williamong-sandbox-0bf4552c6e.assets"
+          "amplify-studyapp-navneeth-sandbox-5fcac80f65.assets"
         ],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
@@ -36,10 +36,10 @@
         }
       },
       "dependencies": [
-        "amplify-studyapp-williamong-sandbox-0bf4552c6e.assets"
+        "amplify-studyapp-navneeth-sandbox-5fcac80f65.assets"
       ],
       "metadata": {
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65": [
           {
             "type": "aws:cdk:stack-tags",
             "data": [
@@ -54,1126 +54,362 @@
             ]
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/deploymentType": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/deploymentType": [
           {
             "type": "aws:cdk:logicalId",
             "data": "deploymentType"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/region": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/region": [
           {
             "type": "aws:cdk:logicalId",
             "data": "region"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/UserPool/Resource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/UserPool/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthUserPool4BA7F805"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/UserPoolAppClient/Resource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/UserPoolAppClient/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthUserPoolAppClient2626C6F8"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/IdentityPool": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/IdentityPool": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthIdentityPool3FDE84CC"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/authenticatedUserRole/Resource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/authenticatedUserRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/IdentityPoolRoleAttachment": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/CDKMetadata/Default": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/CDKMetadata/Condition": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolCA0FDF7ERef": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthUserPool6CD4C55ARef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolCA0FDF7ERef"
+            "data": "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthUserPool6CD4C55ARef"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolAppClientC4CF5EACRef": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthUserPoolAppClientBA62C766Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolAppClientC4CF5EACRef"
+            "data": "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthUserPoolAppClientBA62C766Ref"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthIdentityPoolED5C3400Ref": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthIdentityPool6F00048DRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthIdentityPoolED5C3400Ref"
+            "data": "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthIdentityPool6F00048DRef"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef"
+            "data": "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthunauthenticatedUserRole0D3BEB69Ref": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthunauthenticatedUserRole0D3BEB69Ref"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/auth.NestedStack/auth.NestedStackResource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/auth.NestedStack/auth.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "auth179371D7"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/userPoolId": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/userPoolId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "userPoolId"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/webClientId": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/webClientId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "webClientId"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/identityPoolId": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/identityPoolId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "identityPoolId"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/authRegion": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/authRegion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "authRegion"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/allowUnauthenticatedIdentities": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/allowUnauthenticatedIdentities": [
           {
             "type": "aws:cdk:logicalId",
             "data": "allowUnauthenticatedIdentities"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/signupAttributes": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/signupAttributes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "signupAttributes"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/usernameAttributes": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/usernameAttributes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "usernameAttributes"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/verificationMechanisms": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/verificationMechanisms": [
           {
             "type": "aws:cdk:logicalId",
             "data": "verificationMechanisms"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/passwordPolicyMinLength": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/passwordPolicyMinLength": [
           {
             "type": "aws:cdk:logicalId",
             "data": "passwordPolicyMinLength"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/passwordPolicyRequirements": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/passwordPolicyRequirements": [
           {
             "type": "aws:cdk:logicalId",
             "data": "passwordPolicyRequirements"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/mfaConfiguration": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/mfaConfiguration": [
           {
             "type": "aws:cdk:logicalId",
             "data": "mfaConfiguration"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/mfaTypes": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/mfaTypes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "mfaTypes"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/socialProviders": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/socialProviders": [
           {
             "type": "aws:cdk:logicalId",
             "data": "socialProviders"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthCognitoDomain": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthCognitoDomain": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthCognitoDomain"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthScope": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthScope": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthScope"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthRedirectSignIn": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthRedirectSignIn": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthRedirectSignIn"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthRedirectSignOut": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthRedirectSignOut": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthRedirectSignOut"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthResponseType": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthResponseType": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthResponseType"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthClientId": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthClientId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthClientId"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/GraphQLAPI/Resource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "firstBucketB40A1E24"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/GraphQLAPI/TransformerSchema": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "firstBucketPolicy3683FCB1"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/GraphQLAPI/DefaultApiKey": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/AutoDeleteObjectsCustomResource/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "firstBucketAutoDeleteObjectsCustomResourceAAAF3012"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/AmplifyTableManager/amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent070B2C08Arn": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent070B2C08Arn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/AmplifyTableManager.NestedStack/AmplifyTableManager.NestedStackResource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource86290833"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/DynamoDBModelTableReadIOPS": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DynamoDBModelTableReadIOPS"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/DynamoDBModelTableWriteIOPS": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DynamoDBModelTableWriteIOPS"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/DynamoDBBillingMode": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DynamoDBBillingMode"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/DynamoDBEnablePointInTimeRecovery": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DynamoDBEnablePointInTimeRecovery"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/DynamoDBEnableServerSideEncryption": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DynamoDBEnableServerSideEncryption"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/HasEnvironmentParameter": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "HasEnvironmentParameter"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/ShouldUseServerSideEncryption": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ShouldUseServerSideEncryption"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/ShouldUsePayPerRequestBilling": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ShouldUsePayPerRequestBilling"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/ShouldUsePointInTimeRecovery": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ShouldUsePointInTimeRecovery"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/TodoTable": [
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Todo"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/TodoTable/Default/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "TodoTable"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Todo"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/CustomTableTodoTable": [
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Todo"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/GetAttTodoTableStreamArn": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "GetAttTodoTableStreamArn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/GetAttTodoTableName": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "GetAttTodoTableName"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/TodoIAMRole": [
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "TodoIAMRole"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/TodoIAMRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "TodoIAMRole2DA8E66E"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "TodoIAMRole"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/TodoDataSource": [
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "TodoTable"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/TodoDataSource/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "TodoDataSource"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "TodoTable"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/QuerygetTodoauth0Function/QuerygetTodoauth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "QuerygetTodoauth0FunctionQuerygetTodoauth0FunctionAppSyncFunction846D8436"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "QuerygetTodoauth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/QuerygetTodopostAuth0Function/QuerygetTodopostAuth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "QuerygetTodopostAuth0FunctionQuerygetTodopostAuth0FunctionAppSyncFunction6BE14593"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "QuerygetTodopostAuth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/QueryGetTodoDataResolverFn/QueryGetTodoDataResolverFn.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "QueryGetTodoDataResolverFnQueryGetTodoDataResolverFnAppSyncFunctionE2B57DAD"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "QueryGetTodoDataResolverFn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/queryGetTodoResolver": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "GetTodoResolver"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Query.getTodo"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/QuerylistTodosauth0Function/QuerylistTodosauth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "QuerylistTodosauth0FunctionQuerylistTodosauth0FunctionAppSyncFunction7D761961"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "QuerylistTodosauth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/QuerylistTodospostAuth0Function/QuerylistTodospostAuth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "QuerylistTodospostAuth0FunctionQuerylistTodospostAuth0FunctionAppSyncFunction154D8577"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "QuerylistTodospostAuth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/QueryListTodosDataResolverFn/QueryListTodosDataResolverFn.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "QueryListTodosDataResolverFnQueryListTodosDataResolverFnAppSyncFunctionF825FE47"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "QueryListTodosDataResolverFn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/queryListTodosResolver": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ListTodoResolver"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Query.listTodos"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationcreateTodoinit0Function/MutationcreateTodoinit0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationcreateTodoinit0FunctionMutationcreateTodoinit0FunctionAppSyncFunction54DE5B8B"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationcreateTodoinit0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationcreateTodoauth0Function/MutationcreateTodoauth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationcreateTodoauth0FunctionMutationcreateTodoauth0FunctionAppSyncFunction21817E36"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationcreateTodoauth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationcreateTodopostAuth0Function/MutationcreateTodopostAuth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationcreateTodopostAuth0FunctionMutationcreateTodopostAuth0FunctionAppSyncFunctionED59EB9F"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationcreateTodopostAuth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationCreateTodoDataResolverFn/MutationCreateTodoDataResolverFn.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationCreateTodoDataResolverFnMutationCreateTodoDataResolverFnAppSyncFunction900EC5CF"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationCreateTodoDataResolverFn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/mutationCreateTodoResolver": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CreateTodoResolver"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Mutation.createTodo"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationupdateTodoinit0Function/MutationupdateTodoinit0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationupdateTodoinit0FunctionMutationupdateTodoinit0FunctionAppSyncFunction1B95BB19"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationupdateTodoinit0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationupdateTodoauth0Function/MutationupdateTodoauth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationupdateTodoauth0FunctionMutationupdateTodoauth0FunctionAppSyncFunction1E4A3112"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationupdateTodoauth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationupdateTodopostAuth0Function/MutationupdateTodopostAuth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationupdateTodopostAuth0FunctionMutationupdateTodopostAuth0FunctionAppSyncFunction50C507D7"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationupdateTodopostAuth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationUpdateTodoDataResolverFn/MutationUpdateTodoDataResolverFn.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationUpdateTodoDataResolverFnMutationUpdateTodoDataResolverFnAppSyncFunctionBC238C49"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationUpdateTodoDataResolverFn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/mutationUpdateTodoResolver": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "UpdateTodoResolver"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Mutation.updateTodo"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationdeleteTodoauth0Function/MutationdeleteTodoauth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationdeleteTodoauth0FunctionMutationdeleteTodoauth0FunctionAppSyncFunctionC82C218C"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationdeleteTodoauth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationdeleteTodopostAuth0Function/MutationdeleteTodopostAuth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationdeleteTodopostAuth0FunctionMutationdeleteTodopostAuth0FunctionAppSyncFunction483271A2"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationdeleteTodopostAuth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/MutationDeleteTodoDataResolverFn/MutationDeleteTodoDataResolverFn.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MutationDeleteTodoDataResolverFnMutationDeleteTodoDataResolverFnAppSyncFunction3879153F"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "MutationDeleteTodoDataResolverFn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/mutationDeleteTodoResolver": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DeleteTodoResolver"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Mutation.deleteTodo"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/SubscriptiononCreateTodoauth0Function/SubscriptiononCreateTodoauth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptiononCreateTodoauth0FunctionSubscriptiononCreateTodoauth0FunctionAppSyncFunction042EF9E1"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "SubscriptiononCreateTodoauth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/SubscriptiononCreateTodopostAuth0Function/SubscriptiononCreateTodopostAuth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptiononCreateTodopostAuth0FunctionSubscriptiononCreateTodopostAuth0FunctionAppSyncFunction18E34C4E"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "SubscriptiononCreateTodopostAuth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/SubscriptionOnCreateTodoDataResolverFn/SubscriptionOnCreateTodoDataResolverFn.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptionOnCreateTodoDataResolverFnSubscriptionOnCreateTodoDataResolverFnAppSyncFunction462A70C9"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "SubscriptionOnCreateTodoDataResolverFn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/subscriptionOnCreateTodoResolver": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptiononCreateTodoResolver"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Subscription.onCreateTodo"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/SubscriptiononUpdateTodoauth0Function/SubscriptiononUpdateTodoauth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptiononUpdateTodoauth0FunctionSubscriptiononUpdateTodoauth0FunctionAppSyncFunction80D0DFA3"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "SubscriptiononUpdateTodoauth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/SubscriptiononUpdateTodopostAuth0Function/SubscriptiononUpdateTodopostAuth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptiononUpdateTodopostAuth0FunctionSubscriptiononUpdateTodopostAuth0FunctionAppSyncFunction04445BC7"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "SubscriptiononUpdateTodopostAuth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/SubscriptionOnUpdateTodoDataResolverFn/SubscriptionOnUpdateTodoDataResolverFn.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptionOnUpdateTodoDataResolverFnSubscriptionOnUpdateTodoDataResolverFnAppSyncFunction523DF0E4"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "SubscriptionOnUpdateTodoDataResolverFn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/subscriptionOnUpdateTodoResolver": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptiononUpdateTodoResolver"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Subscription.onUpdateTodo"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/SubscriptiononDeleteTodoauth0Function/SubscriptiononDeleteTodoauth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptiononDeleteTodoauth0FunctionSubscriptiononDeleteTodoauth0FunctionAppSyncFunctionF69F2220"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "SubscriptiononDeleteTodoauth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/SubscriptiononDeleteTodopostAuth0Function/SubscriptiononDeleteTodopostAuth0Function.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptiononDeleteTodopostAuth0FunctionSubscriptiononDeleteTodopostAuth0FunctionAppSyncFunctionE131CBE7"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "SubscriptiononDeleteTodopostAuth0Function"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/SubscriptionOnDeleteTodoDataResolverFn/SubscriptionOnDeleteTodoDataResolverFn.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptionOnDeleteTodoDataResolverFnSubscriptionOnDeleteTodoDataResolverFnAppSyncFunction3E641E8C"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "SubscriptionOnDeleteTodoDataResolverFn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/subscriptionOnDeleteTodoResolver": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "SubscriptiononDeleteTodoResolver"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Subscription.onDeleteTodo"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/CDKMetadata/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CDKMetadata"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/CDKMetadata/Condition": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CDKMetadataAvailable"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/reference-to-amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource48125C4BOutputs.amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent070B2C08Arn": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource48125C4BOutputsamplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataAmplifyTableManagerTableManagerC657A4C63"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/reference-to-amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataGraphQLAPIBE577191ApiId": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataGraphQLAPIBE577191ApiId"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/reference-to-amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataGraphQLAPINONEDSEDBBC93FName": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataGraphQLAPINONEDSEDBBC93FName"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthunauthenticatedUserRole0D3BEB69Ref": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthunauthenticatedUserRole0D3BEB69Ref"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo/reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthIdentityPoolED5C3400Ref": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthIdentityPoolED5C3400Ref"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/Todo.NestedStack/Todo.NestedStackResource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyDataTodoNestedStackTodoNestedStackResource551CEA56"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketPolicyF1C1C548"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketAutoDeleteObjectsCustomResource437F26F5"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB21775929"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/DynamoDBModelTableReadIOPS": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DynamoDBModelTableReadIOPS"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/DynamoDBModelTableWriteIOPS": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DynamoDBModelTableWriteIOPS"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/DynamoDBBillingMode": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DynamoDBBillingMode"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/DynamoDBEnablePointInTimeRecovery": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DynamoDBEnablePointInTimeRecovery"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/DynamoDBEnableServerSideEncryption": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DynamoDBEnableServerSideEncryption"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/LatestNodeRuntimeMap": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/LatestNodeRuntimeMap": [
           {
             "type": "aws:cdk:logicalId",
             "data": "LatestNodeRuntimeMap"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
           {
             "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
             "data": true
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
-          {
-            "type": "aws:cdk:is-custom-resource-handler-singleton",
-            "data": true
-          },
-          {
-            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
-            "data": 2
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleA41FC8C2"
+            "data": "secondBucketC2B62305"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleDefaultPolicyFF1C635B"
+            "data": "secondBucketPolicy6DB52F5B"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/AutoDeleteObjectsCustomResource/Default": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBC5D8AB21"
+            "data": "secondBucketAutoDeleteObjectsCustomResource35C25A59"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/AMPLIFY_DATA_GRAPHQL_ENDPOINTParameter/Resource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/SECOND_BUCKET_BUCKET_NAMEParameter/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AMPLIFYDATAGRAPHQLENDPOINTParameter1C2CBB16"
+            "data": "SECONDBUCKETBUCKETNAMEParameterB27252C9"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/CDKMetadata/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CDKMetadata"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/CDKMetadata/Condition": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CDKMetadataAvailable"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolCA0FDF7ERef": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolCA0FDF7ERef"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthunauthenticatedUserRole0D3BEB69Ref": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthunauthenticatedUserRole0D3BEB69Ref"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthIdentityPoolED5C3400Ref": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthIdentityPoolED5C3400Ref"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataGraphQLAPIBE577191ApiId": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataGraphQLAPIBE577191ApiId"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataGraphQLAPIBE577191GraphQLUrl": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataGraphQLAPIBE577191GraphQLUrl"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB8E708EBEDestinationBucketArn": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB8E708EBEDestinationBucketArn"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data/amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataGraphQLAPIDefaultApiKey5366077EApiKey": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6edataamplifyDataGraphQLAPIDefaultApiKey5366077EApiKey"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/data.NestedStack/data.NestedStackResource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "data7552DF31"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/awsAppsyncApiId": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "awsAppsyncApiId"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/awsAppsyncApiEndpoint": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "awsAppsyncApiEndpoint"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/awsAppsyncAuthenticationType": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "awsAppsyncAuthenticationType"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/awsAppsyncRegion": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "awsAppsyncRegion"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/amplifyApiModelSchemaS3Uri": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyApiModelSchemaS3Uri"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/awsAppsyncApiKey": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "awsAppsyncApiKey"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/awsAppsyncAdditionalAuthenticationTypes": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "awsAppsyncAdditionalAuthenticationTypes"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/amplifyTeamDrive/Bucket/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyTeamDriveBucket28B5C701"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/amplifyTeamDrive/Bucket/Policy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyTeamDriveBucketPolicy20828FCE"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/amplifyTeamDrive/Bucket/AutoDeleteObjectsCustomResource/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyTeamDriveBucketAutoDeleteObjectsCustomResource671F9F2A"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/LatestNodeRuntimeMap": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "LatestNodeRuntimeMap"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
-          {
-            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
-            "data": true
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/AMPLIFY_TEAM_DRIVE_BUCKET_NAMEParameter/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AMPLIFYTEAMDRIVEBUCKETNAMEParameterA8101723"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/storageAccess4/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "storageAccess472A5D2AC"
-          }
-        ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/storageAccess5/Resource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/storageAccess5/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "storageAccess524979CAB"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/CDKMetadata/Default": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/CDKMetadata/Condition": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthunauthenticatedUserRole0D3BEB69Ref": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthunauthenticatedUserRole0D3BEB69Ref"
+            "data": "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/amplifystudyappnavneethsandbox5fcac80f65storagefirstBucket254644D6Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef"
+            "data": "amplifystudyappnavneethsandbox5fcac80f65storagefirstBucket254644D6Ref"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/amplifystudyappwilliamongsandbox0bf4552c6estorageamplifyTeamDriveBucket30E6986BRef": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/amplifystudyappnavneethsandbox5fcac80f65storagesecondBucket0F9CDC01Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifystudyappwilliamongsandbox0bf4552c6estorageamplifyTeamDriveBucket30E6986BRef"
+            "data": "amplifystudyappnavneethsandbox5fcac80f65storagesecondBucket0F9CDC01Ref"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storage.NestedStack/storage.NestedStackResource": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storage.NestedStack/storage.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "storage0EC3F24A"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/storageRegion": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/storageRegion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "storageRegion"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/bucketName": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/bucketName": [
           {
             "type": "aws:cdk:logicalId",
             "data": "bucketName"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/buckets": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/buckets": [
           {
             "type": "aws:cdk:logicalId",
             "data": "buckets"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/CDKMetadata/Default": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/CDKMetadata/Condition": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/BootstrapVersion": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/amplify-studyapp-williamong-sandbox-0bf4552c6e/CheckBootstrapVersion": [
+        "/amplify-studyapp-navneeth-sandbox-5fcac80f65/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "amplify-studyapp-williamong-sandbox-0bf4552c6e"
+      "displayName": "amplify-studyapp-navneeth-sandbox-5fcac80f65"
     },
     "Tree": {
       "type": "cdk:tree",

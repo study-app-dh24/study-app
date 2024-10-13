@@ -34,6 +34,22 @@
       "Mutable": true,
       "Name": "email",
       "Required": true
+     },
+     {
+      "Mutable": true,
+      "Name": "website",
+      "Required": true
+     },
+     {
+      "Mutable": true,
+      "Name": "name",
+      "Required": true
+     },
+     {
+      "AttributeDataType": "String",
+      "Mutable": true,
+      "Name": "privacy",
+      "StringAttributeConstraints": {}
      }
     ],
     "SmsVerificationMessage": "The verification code to your new account is {####}",
