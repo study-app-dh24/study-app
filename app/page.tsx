@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <Authenticator formFields={formFields}>
-      {({user}) => (
+      {() => (
         <main className="min-h-screen">
         {/* TODO: Change colors if needed */}
         <div className="bg-dark_purple flex h-12 w-full items-center sticky top-0 z-10">

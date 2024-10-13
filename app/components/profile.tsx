@@ -9,14 +9,14 @@ import { fetchUserAttributes, updateUserAttributes, FetchUserAttributesOutput } 
 import placeholderImg from '@/app/public/placeholder-pfp.svg';
 import Image from "next/image";
 
-interface AuthUser {
-  userId?: string;
-  username?: string;
-  attributes?: {
-    name?: string;
-    website?: string;
-  };
-}
+// interface AuthUser {
+//   userId?: string;
+//   username?: string;
+//   attributes?: {
+//     name?: string;
+//     website?: string;
+//   };
+// }
 
 function Profile() {
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
