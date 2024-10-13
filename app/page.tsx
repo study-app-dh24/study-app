@@ -6,7 +6,6 @@ import '@aws-amplify/ui-react/styles.css';
 import { Amplify } from 'aws-amplify';
 import outputs from "../amplify_outputs.json";
 import Profile from "./components/profile";
-import { FileUploader } from '@aws-amplify/ui-react-storage';
 import '@aws-amplify/ui-react/styles.css';
 import { View } from "@aws-amplify/ui-react";
 
@@ -22,7 +21,7 @@ export default function Home() {
   return (
     <View>
           <Authenticator>
-      {({ signOut, user }) => (
+      {() => (
         <main>
             {/* TODO: Change colors if needed */}
           <div className="bg-dark_purple flex h-12 w-full items-center">
