@@ -7,6 +7,7 @@ import '@aws-amplify/ui-react/styles.css';
 import outputs from "../amplify_outputs.json";
 import Profile from "./components/profile";
 import PeerConnect from "./components/peerConnect";
+import { View } from "@aws-amplify/ui-react";
 
 const configureAmplify = () => {
   Amplify.configure(outputs);
@@ -44,7 +45,8 @@ export default function Home() {
   }, []);
 
   return (
-    <Authenticator formFields={formFields}>
+    <View>
+          <Authenticator formFields={formFields}>
       {() => (
         <main className="min-h-screen">
         {/* TODO: Change colors if needed */}
@@ -72,8 +74,15 @@ export default function Home() {
           <PeerConnect />
         </div>
       </div>
+      {/* <VideoSearch /> */}
+      {/* <NotesGenerator /> */}
     </main>
     )}
+
+
     </Authenticator>
+
+    </View>
+
   );
 }

@@ -2,8 +2,9 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-const notesGenerator = () => {
-  const [topic, setTopic] = useState('');
+
+const NotesGenerator = () => {
+  const [topic, setTopic] = useState('Lines and Tangents');
   const [notes, setNotes] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -13,10 +14,34 @@ const notesGenerator = () => {
     setError(null);
 
     try {
-      const response = await axios.post('/api/generate-notes', { topic });
-      setNotes(response.data);
+      const response = await axios.post(
+        'https://api.perplexity.ai/chat/completions',
+        {
+          model: "llama-3.1-sonar-small-128k-online", // Use an appropriate model
+          messages: [
+            { role: "system", content: "You are a helpful AI assistant." },
+            { role: "user", content: `Generate notes on the topic: ${topic} within 500 words` }
+          ],
+          max_tokens: 500,
+          timeout: 50000,
+        },
+        {
+          headers: {
+            'Authorization': `Bearer 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`, // Replace with your actual API key
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+
+      setNotes(response.data.choices[0].message.content);
     } catch (err) {
-      setError('Failed to generate notes');
+      if (axios.isAxiosError(err)) {
+        console.error('Axios error:', err.response?.data);
+        setError('Failed to generate notes: ' + (err.response?.data?.error?.message || 'unknown error'));
+      } else {
+        console.error('Unexpected error:', err);
+        setError('Failed to generate notes');
+      }
     } finally {
       setLoading(false);
     }
@@ -38,11 +63,11 @@ const notesGenerator = () => {
       {notes && (
         <div>
           <h2>Generated Notes:</h2>
-          <pre>{JSON.stringify(notes, null, 2)}</pre>
+            <p>{notes}</p>
         </div>
       )}
     </div>
   );
 };
 
-export default notesGenerator;
+export default NotesGenerator;
