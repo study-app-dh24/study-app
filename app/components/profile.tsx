@@ -1,9 +1,6 @@
 'use client'
 
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import placeholderImg from '@/app/public/placeholder-pfp.svg';
-import editImg from '@/app/public/edit-pfp.svg';
 import { Modal, ModalContent, ModalHeader, ModalBody, Button, ModalFooter, useDisclosure } from "@nextui-org/react";
 import { TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Avatar} from "@mui/material";
 
@@ -67,7 +64,7 @@ export default function Profile() {
     setPrivacy(event.target.value);
   };
 
-  const handleSave = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSave = () => {
     if (name.length !== 0 && linkedin.length !== 0) {
       // TODO: update the profile
       onClose();
