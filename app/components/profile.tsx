@@ -2,48 +2,50 @@
 
 import React, { useEffect, useState } from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, Button, ModalFooter, useDisclosure, Dropdown, DropdownItem, DropdownTrigger, DropdownMenu } from "@nextui-org/react";
-import { TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Avatar} from "@mui/material";
+// import { TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Avatar} from "@mui/material";
+import { TextField, Avatar } from "@mui/material";
 import { signOut } from 'aws-amplify/auth';
+import { fetchUserAttributes, updateUserAttributes } from 'aws-amplify/auth';
 
-interface UserInfo {
-  name: string;
-  picture: string;
-  bio: string;
-  linkedin: string;
-  privacy: string;
+interface AuthUser {
+  userId?: string;
+  username?: string;
+  attributes?: {
+    name?: string;
+    website?: string;
+  };
 }
 
-export default function Profile() {
+interface ProfileProps {
+  user?: AuthUser;
+}
+
+function Profile({ user }: ProfileProps) {
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
-  const [user, setUser] = useState<UserInfo>({ name: "", picture: "", bio: "", linkedin: "", privacy: "" });
+  const [attributes, setAttributes] = useState<Record<string, any> | null>(null);
 
-  const [name, setName] = useState(user.name);
-  const [bio, setBio] = useState(user.bio);
-  const [linkedin, setLinkedin] = useState(user.linkedin);
-  const [privacy, setPrivacy] = useState(user.privacy);
-
-  const getUserData = async () => {
-    // TODO: retrieve user data
-    const fetchedUserData: UserInfo = {
-      name: "Temp Name",
-      picture: "Temp Pic",
-      bio: "Temp Bio",
-      linkedin: "Temp LinkedIn",
-      privacy: "Private",
-    };
-    setUser(fetchedUserData);
-  };
+  const [name, setName] = useState('');
+  const [linkedin, setLinkedin] = useState('');
+  // const [privacy, setPrivacy] = useState('');
 
   useEffect(() => {
-    getUserData();
+    async function getUserAttributes() {
+      try {
+        const userAttributes = await fetchUserAttributes();
+        setAttributes(userAttributes);
+      } catch (error) {
+        console.error('Error fetching user attributes:', error);
+      }
+    }
+    getUserAttributes();
   }, []);
 
   useEffect(() => {
-    setName(user.name);
-    setBio(user.bio);
-    setLinkedin(user.linkedin);
-    setPrivacy(user.privacy);
-  }, [user]);
+    if (attributes) {
+      setName(attributes?.name || 'Default Name'); // Set a default value if name is undefined or null
+      setLinkedin(attributes?.website || 'https://linkedin.com'); // Set a default value if LinkedIn is undefined or null
+    }
+  }, [attributes]);
 
   const nameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -53,22 +55,30 @@ export default function Profile() {
     // TODO: Picture change
   };
 
-  const bioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setBio(event.target.value);
-  };
-
   const linkedinChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLinkedin(event.target.value);
   };
 
-  const privacyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPrivacy(event.target.value);
-  };
+  // const privacyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setPrivacy(event.target.value);
+  // };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (name.length !== 0 && linkedin.length !== 0) {
-      // TODO: update the profile
-      onClose();
+      try {
+        const result = await updateUserAttributes({
+          userAttributes: {
+            name: name,
+            website: linkedin,
+          },
+        });
+        console.log('Attributes updated successfully:', result);
+        const updatedAttributes = await fetchUserAttributes();
+        setAttributes(updatedAttributes);
+        onClose();
+      } catch (error) {
+        console.error('Error updating user attributes:', error);
+      }
     }
   };
 
@@ -76,10 +86,14 @@ export default function Profile() {
     await signOut();
   };
 
+  if (!attributes) {
+    return <p> ...</p>;
+  }
+
   return (
     <>
     <div className="flex flex-row items-center gap-2">
-      <div> {user.name} </div>
+      <div> {attributes.name} </div>
         <Dropdown className="bg-carbon rounded-xl">
         <DropdownTrigger>
           <Avatar
@@ -113,9 +127,8 @@ export default function Profile() {
                 </div>
                 <div className="flex flex-col gap-4 w-full">
                   <TextField label="Name" value={name} variant="outlined" onChange={nameChange}/>
-                  <TextField label="Bio" value={bio} variant="outlined" onChange={bioChange}/>
                   <TextField label="LinkedIn" value={linkedin} variant="outlined" onChange={linkedinChange} />
-                  <FormControl>
+                  {/* <FormControl>
                     <FormLabel> Privacy </FormLabel>
                     <RadioGroup
                       value={privacy}
@@ -124,7 +137,7 @@ export default function Profile() {
                       <FormControlLabel value="Private" control={<Radio />} label="Private" />
                       <FormControlLabel value="Public" control={<Radio />} label="Public" />
                     </RadioGroup>
-                  </FormControl>
+                  </FormControl> */}
                 </div>
               </ModalBody>
 
@@ -143,3 +156,5 @@ export default function Profile() {
     </>
   );
 }
+
+export default Profile;

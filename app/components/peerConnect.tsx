@@ -1,20 +1,26 @@
-import Image from "next/image";
-import addUserImg from '@/app/public/add-user.svg';
+import {User, Link} from "@nextui-org/react";
 
-export default function peerConnect() {
+let names = ["Jane Doe", "Jack Smith", "Jill Johnson", "Jim Brown", "Joan White", "Jake Davis", "Julie Miller", "Joe Wilson", "Jessica Taylor"];
+
+export default function PeerConnect() {
   return (
-    <div className="w-full flex flex-col gap-4">
-      <p> John Doe </p>
-      <a href="https://www.linkedin.com/in/william-ong1" target="_blank" rel="noreferrer noopener">
-        <Image
-          className="hover:scale-125"
-          priority
-          src={addUserImg}
-          height={32}
-          width={32}
-          alt="linkedin"
-        />
-      </a>
+    <div className="flex flex-row gap-12">
+      <div className="flex flex-col gap-4 p-6 pb-8 gap-16">
+        {names.map((name, index) => (
+          <User
+            key={index}
+            name={name}
+            description={
+              <Link href="https://twitter.com/jrgarciadev" size="sm" isExternal>
+                @jrgarciadev
+              </Link>
+            }
+            avatarProps={{
+              src: "https://avatars.githubusercontent.com/u/30373425?v=4"
+            }}
+          />
+        ))}
+      </div>
     </div>
-  )
-};
+  );
+}
