@@ -19,6 +19,7 @@ const config: Config = {
         salmon: "#FF6B6B",
         silk: "#F2F2F2",
         carbon: "#333333",
+        beige: "#cac7c7"
       },
     },
   },
