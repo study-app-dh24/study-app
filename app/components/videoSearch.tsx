@@ -60,7 +60,7 @@ const VideoSearch: React.FC<VideoSearchProps> = ({ topics }) => {
                 {videos.length > 0 ? (
                     videos.map((video) => (
                         <div key={video.id.videoId} style={{ marginBottom: '20px' }}>
-                            <h3>{video.snippet.title}</h3>
+                            <h3 style={{alignItems:'center'}}>{video.snippet.title}</h3>
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <iframe
                                     width="560"
