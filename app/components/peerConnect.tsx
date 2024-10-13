@@ -1,5 +1,5 @@
 import { User, Link } from "@nextui-org/react";
-import { UserType, AttributeType } from '@aws-sdk/client-cognito-identity-provider';
+import { UserType } from '@aws-sdk/client-cognito-identity-provider';
 
 interface CustomUser extends Omit<UserType, 'Attributes'> {
   Attributes?: { Name: string; Value: string }[]; // Adjust this as per the returned type
