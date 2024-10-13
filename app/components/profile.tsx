@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, Button, ModalFooter, useDisclosure, Dropdown, DropdownItem, DropdownTrigger, DropdownMenu } from "@nextui-org/react";
-import { TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from "@mui/material";
+// import { TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from "@mui/material";
+import { TextField } from "@mui/material";
 import { signOut } from 'aws-amplify/auth';
 import { fetchUserAttributes, updateUserAttributes, FetchUserAttributesOutput } from 'aws-amplify/auth';
 import placeholderImg from '@/app/public/placeholder-pfp.svg';
@@ -23,13 +24,12 @@ function Profile() {
 
   const [name, setName] = useState('');
   const [linkedin, setLinkedin] = useState('');
-  const [privacy, setPrivacy] = useState('');
+  // const [privacy, setPrivacy] = useState('');
 
   async function getUserAttributes() {
     try {
       const userAttributes = await fetchUserAttributes();
       setAttributes(userAttributes);
-      console.log(userAttributes);
     } catch (error) {
       console.error('Error fetching user attributes:', error);
     }
@@ -43,7 +43,6 @@ function Profile() {
     if (attributes) {
       setName(attributes?.name || 'Default Name'); // Set a default value if name is undefined or null
       setLinkedin(attributes?.website || 'https://linkedin.com'); // Set a default value if LinkedIn is undefined or null
-      setPrivacy(attributes?.['custom:privacy'] || "public");
     }
   }, [attributes]);
 
@@ -59,9 +58,9 @@ function Profile() {
     setLinkedin(event.target.value);
   };
 
-  const privacyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPrivacy(event.target.value);
-  };
+  // const privacyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setPrivacy(event.target.value);
+  // };
 
   const handleSave = async () => {
     if (name.length !== 0 && linkedin.length !== 0) {
@@ -70,7 +69,7 @@ function Profile() {
           userAttributes: {
             name: name,
             website: linkedin,
-            'custom:privacy': privacy,
+            // 'custom:privacy': privacy,
           },
         });
         console.log('Attributes updated successfully:', result);
@@ -128,7 +127,7 @@ function Profile() {
                 <div className="flex flex-col gap-4 w-full">
                   <TextField label="Name" value={name} variant="outlined" onChange={nameChange}/>
                   <TextField label="LinkedIn" value={linkedin} variant="outlined" onChange={linkedinChange} />
-                  <FormControl>
+                  {/* <FormControl>
                     <FormLabel> Privacy </FormLabel>
                     <RadioGroup
                       value={privacy}
@@ -137,7 +136,7 @@ function Profile() {
                       <FormControlLabel value="private" control={<Radio />} label="Private" />
                       <FormControlLabel value="public" control={<Radio />} label="Public" />
                     </RadioGroup>
-                  </FormControl>
+                  </FormControl> */}
                 </div>
               </ModalBody>
 

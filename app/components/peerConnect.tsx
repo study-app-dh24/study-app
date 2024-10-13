@@ -5,7 +5,6 @@ interface CustomUser extends Omit<UserType, 'Attributes'> {
   Attributes?: { Name: string; Value: string }[]; // Adjust this as per the returned type
   fullName?: string;
   website?: string;
-  privacy?: string;
 }
 
 import React, { useState, useEffect } from 'react';
@@ -57,7 +56,6 @@ const UserList: React.FC = () => {
           Attributes: user.Attributes,
           fullName: attributes?.['name'] || 'N/A',
           website: attributes?.['website'] || 'N/A',
-          privacy: attributes?.['custom:privacy'] || 'N/A'
         } as CustomUser; // Type assertion here
       });
 
@@ -70,29 +68,28 @@ const UserList: React.FC = () => {
     }
   };
 
+  let i = 0;
   return (
     <div className="flex flex-col gap-4 p-4 pb-8 items-start gap-16">
-      {users
-        .filter(user => user.privacy !== "private") // Filter out users with privacy set to "false"
-        .map((user, index) => ( // Use index instead of i++ for the key
-          <div
-            key={index}
-            className="bg-beige rounded-3xl p-2 flex items-center w-full"
-          >
-            <User
-              key={user.fullName}
-              name={user.fullName}
-              description={
-                <Link href={user.website} size="sm" isExternal>
-                  {"@" + (user.website)?.replace(/.*\/([^\/]+)\/?$/, '$1')}
-                </Link>
-              }
-              avatarProps={{
-                src: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
-              }}
-            />
-          </div>
-        ))}
+      {users.map((user) => (
+        <div
+          key={i++}
+          className="bg-beige rounded-3xl p-2 flex items-center w-full"
+        >
+          <User
+            key={user.fullName}
+            name={user.fullName}
+            description={
+              <Link href={user.website} size="sm" isExternal>
+                {"@" + (user.website)?.replace(/.*\/([^\/]+)\/?$/, '$1')}
+              </Link>
+            }
+            avatarProps={{
+              src: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+            }}
+          />
+        </div>
+      ))}
     </div>
   );
 };
