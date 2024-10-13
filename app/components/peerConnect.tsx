@@ -1,22 +1,18 @@
-import {User, Link} from "@nextui-org/react";
-import { UserType } from '@aws-sdk/client-cognito-identity-provider';
+import { User, Link } from "@nextui-org/react";
+import { UserType, AttributeType } from '@aws-sdk/client-cognito-identity-provider';
 
-interface User extends Omit<UserType, 'Attributes'> {
-  Attributes?: { Name: string; Value: string }[];
+interface CustomUser extends Omit<UserType, 'Attributes'> {
+  Attributes?: { Name: string; Value: string }[]; // Adjust this as per the returned type
+  fullName?: string;
+  website?: string;
 }
 
 import React, { useState, useEffect } from 'react';
 import { fetchAuthSession } from 'aws-amplify/auth';
 import { CognitoIdentityProviderClient, ListUsersCommand } from '@aws-sdk/client-cognito-identity-provider';
 
-interface User extends Omit<UserType, 'Attributes'> {
-  Attributes?: { Name: string; Value: string }[];
-  fullName?: string;
-  website?: string;
-}
-
 const UserList: React.FC = () => {
-  const [users, setUsers] = useState<User[]>([]);
+  const [users, setUsers] = useState<CustomUser[]>([]);
 
   useEffect(() => {
     listUsers();
@@ -46,8 +42,8 @@ const UserList: React.FC = () => {
 
       const response = await client.send(command);
 
-      // Transform UserType to User
-      const transformedUsers: User[] = (response.Users || []).map(user => {
+      // Transform UserType to CustomUser
+      const transformedUsers: CustomUser[] = (response.Users || []).map(user => {
         const attributes = user.Attributes?.reduce((acc, attr) => {
           if (attr.Name && attr.Value) {
             acc[attr.Name] = attr.Value;
@@ -60,7 +56,7 @@ const UserList: React.FC = () => {
           Attributes: user.Attributes,
           fullName: attributes?.['name'] || 'N/A',
           website: attributes?.['website'] || 'N/A'
-        };
+        } as CustomUser; // Type assertion here
       });
 
       setUsers(transformedUsers);
@@ -88,7 +84,7 @@ const UserList: React.FC = () => {
               src: "https://avatars.githubusercontent.com/u/30373425?v=4"
             }}
           />
-          </div>
+        </div>
       ))}
     </div>
   );
