@@ -1,6 +1,8 @@
 import { useState } from "react";
 import folderImg from '@/app/public/folder.svg';
 import Image from "next/image";
+import Physics from "./physics";
+import Link from 'next/link';
 
 export default function Courses() {
   const [showJavaModal, setShowJavaModal] = useState(false);
@@ -113,7 +115,7 @@ export default function Courses() {
         <div className="bg-white p-12 w-96 h-64 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold">Physics Courses</h2>
           <ul>
-            <li>- Physics I</li>
+            <li> <Link href={`/courses/physics1`}> <a> Physics I</a> </Link> </li>
             <li>- Physics II</li>
           </ul>
           <button

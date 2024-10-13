@@ -15,7 +15,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { View } from "@aws-amplify/ui-react";
 import { FileUploader } from '@aws-amplify/ui-react-storage';
 import '@aws-amplify/ui-react/styles.css';
-
+import Header from "./components/header";
 
 const configureAmplify = () => {
   Amplify.configure(outputs);
@@ -73,25 +73,8 @@ export default function Home() {
       {() => (
         <main className="min-h-screen">
         {/* TODO: Change colors if needed */}
-        <div className="bg-light_purple flex h-16 w-full items-center sticky top-0 z-10 shadow-2xl border-black px-2 transition-all duration-300 border-2 border-black">
-          <div className="mr-auto flex flex-row justify-center items-center">
-            <a href="#">
-              <Image
-                className="h-16 w-16 flex rounded-full transition-transform duration-200 hover:cursor-pointer hover:scale-110"
-                alt=""
-                src={menturaLogo}
-              />
-            </a>
-          </div>
 
-        <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-row gap-6">
-        </div>
-
-        <div className="ml-auto pr-2">
-          <Profile />
-        </div>
-      </div>
-
+        <Header />
       <div className="flex flex-row justify-between gap-12 w-full">
         <div className="flex flex-col w-3/4 bg-silk overflow-hidden rounded-xl py-1 border-2 border-black ml-12 mt-12">
           <div className='text-left mt-12'>
