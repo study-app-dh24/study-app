@@ -18,7 +18,7 @@ interface Video {
 
 const topics = ["Tangents to circles","Tangents and velocity","Limits"]; // Define your topics here
 
-const videoSearch: React.FC = () => {
+const VideoSearch: React.FC = () => {
     const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
     const [error, setError] = useState<string | null>(null);
 
@@ -66,4 +66,4 @@ const videoSearch: React.FC = () => {
     );
 };
 
-export default videoSearch;
+export default VideoSearch;
