@@ -15,9 +15,9 @@ import './custom-styles.css';
 import Image from "next/image";
 import backgroundImg from '@/app/public/background-purple.jpg';
 
-const configureAmplify = () => {
+// const configureAmplify = () => {
   Amplify.configure(outputs);
-};
+// };
 
 // const handleUploadSuccess = () => {
 //   console.log('File uploaded:');
@@ -53,7 +53,7 @@ export default function Home() {
   const [attributes, setAttributes] = useState<FetchUserAttributesOutput>();
 
   useEffect(() => {
-    configureAmplify();
+    // configureAmplify();
     async function getUserAttributes() {
       try {
         const userAttributes = await fetchUserAttributes();

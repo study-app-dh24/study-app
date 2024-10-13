@@ -6,6 +6,7 @@ interface CustomUser extends Omit<UserType, 'Attributes'> {
   fullName?: string;
   website?: string;
   picture?: string;
+  privacy?: string;
 }
 
 import React, { useState, useEffect } from 'react';
@@ -58,6 +59,7 @@ const UserList: React.FC = () => {
           fullName: attributes?.['name'] || 'N/A',
           website: attributes?.['website'] || 'N/A',
           picture: attributes?.['custom:picture'] || 'http://www.gravatar.com/avatar/?d=mp',
+          privacy: attributes?.['custom:privacy'] || "public",
         } as CustomUser; // Type assertion here
       });
 
@@ -70,25 +72,27 @@ const UserList: React.FC = () => {
   let i = 0;
   return (
     <div className="flex flex-col gap-4 p-4 pb-8 items-start gap-16">
-      {users.map((user) => (
-        <div
-          key={i++}
-          className="bg-beige rounded-3xl p-2 flex items-center w-full"
-        >
-          <User
-            key={user.fullName}
-            name={user.fullName}
-            description={
-              <Link href={user.website} size="sm" isExternal>
-                {"@" + (user.website)?.replace(/.*\/([^\/]+)\/?$/, '$1')}
-              </Link>
-            }
-            avatarProps={{
-              src: user.picture,
-            }}
-          />
-        </div>
-      ))}
+      {users
+        .filter(user => user.privacy === "public") // Filter users
+        .map((user) => (
+          <div
+            key={i++}
+            className="bg-beige rounded-3xl p-2 flex items-center w-full"
+          >
+            <User
+              key={user.fullName}
+              name={user.fullName}
+              description={
+                <Link href={user.website} size="sm" isExternal>
+                  {"@" + (user.website)?.replace(/.*\/([^\/]+)\/?$/, '$1')}
+                </Link>
+              }
+              avatarProps={{
+                src: user.picture,
+              }}
+            />
+          </div>
+        ))}
     </div>
   );
 };
