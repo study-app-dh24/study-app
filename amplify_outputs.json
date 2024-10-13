@@ -1,9 +1,9 @@
 {
   "auth": {
-    "user_pool_id": "us-east-2_5RyCJOgNs",
+    "user_pool_id": "us-east-2_cBsFWJSn8",
     "aws_region": "us-east-2",
-    "user_pool_client_id": "6mhgtsou5ml7b0l3ab7pgvhj9e",
-    "identity_pool_id": "us-east-2:34314708-78ff-4883-9bc0-c318ccc0c462",
+    "user_pool_client_id": "anttme81i6ojc3ps4vg1ei2tl",
+    "identity_pool_id": "us-east-2:3869479c-bdac-45aa-a2ae-0f04fd8b6a56",
     "mfa_methods": [],
     "standard_required_attributes": [
       "email"
@@ -24,128 +24,26 @@
     },
     "unauthenticated_identities_enabled": true
   },
-  "data": {
-    "url": "https://mynq6c3pgjhqhobw3oxav2qnim.appsync-api.us-east-2.amazonaws.com/graphql",
-    "aws_region": "us-east-2",
-    "api_key": "da2-74el35xatffsji7u4qvuhnuapy",
-    "default_authorization_type": "API_KEY",
-    "authorization_types": [
-      "AMAZON_COGNITO_USER_POOLS",
-      "AWS_IAM"
-    ],
-    "model_introspection": {
-      "version": 1,
-      "models": {
-        "Todo": {
-          "name": "Todo",
-          "fields": {
-            "id": {
-              "name": "id",
-              "isArray": false,
-              "type": "ID",
-              "isRequired": true,
-              "attributes": []
-            },
-            "content": {
-              "name": "content",
-              "isArray": false,
-              "type": "String",
-              "isRequired": false,
-              "attributes": []
-            },
-            "isDone": {
-              "name": "isDone",
-              "isArray": false,
-              "type": "Boolean",
-              "isRequired": false,
-              "attributes": []
-            },
-            "createdAt": {
-              "name": "createdAt",
-              "isArray": false,
-              "type": "AWSDateTime",
-              "isRequired": false,
-              "attributes": [],
-              "isReadOnly": true
-            },
-            "updatedAt": {
-              "name": "updatedAt",
-              "isArray": false,
-              "type": "AWSDateTime",
-              "isRequired": false,
-              "attributes": [],
-              "isReadOnly": true
-            }
-          },
-          "syncable": true,
-          "pluralName": "Todos",
-          "attributes": [
-            {
-              "type": "model",
-              "properties": {}
-            },
-            {
-              "type": "auth",
-              "properties": {
-                "rules": [
-                  {
-                    "allow": "public",
-                    "provider": "apiKey",
-                    "operations": [
-                      "create",
-                      "update",
-                      "delete",
-                      "read"
-                    ]
-                  }
-                ]
-              }
-            }
-          ],
-          "primaryKeyInfo": {
-            "isCustomPrimaryKey": false,
-            "primaryKeyFieldName": "id",
-            "sortKeyFieldNames": []
-          }
-        }
-      },
-      "enums": {},
-      "nonModels": {}
-    }
-  },
   "storage": {
     "aws_region": "us-east-2",
-    "bucket_name": "amplify-studyapp-williamo-amplifyteamdrivebucket28-mrlucpmw8fex",
+    "bucket_name": "amplify-studyapp-navneeth-sand-firstbucketb40a1e24-tmk4pahk71pi",
     "buckets": [
       {
-        "name": "amplifyTeamDrive",
-        "bucket_name": "amplify-studyapp-williamo-amplifyteamdrivebucket28-mrlucpmw8fex",
+        "name": "firstBucket",
+        "bucket_name": "amplify-studyapp-navneeth-sand-firstbucketb40a1e24-tmk4pahk71pi",
+        "aws_region": "us-east-2"
+      },
+      {
+        "name": "secondBucket",
+        "bucket_name": "amplify-studyapp-navneeth-san-secondbucketc2b62305-rmweyh6wiibn",
         "aws_region": "us-east-2",
         "paths": {
-          "profile-pictures/*": {
-            "guest": [
-              "get",
-              "list"
-            ]
-          },
-          "profile-pictures/${cognito-identity.amazonaws.com:sub}/*": {
+          "private/${cognito-identity.amazonaws.com:sub}/*": {
             "entityidentity": [
               "get",
               "list",
               "write",
               "delete"
-            ]
-          },
-          "picture-submissions/*": {
-            "authenticated": [
-              "get",
-              "list",
-              "write"
-            ],
-            "guest": [
-              "get",
-              "list",
-              "write"
             ]
           }
         }

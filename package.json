@@ -11,6 +11,7 @@
   "dependencies": {
     "@aws-amplify/adapter-nextjs": "^1.2.21",
     "@aws-amplify/api-graphql": "^4.4.0",
+    "@aws-amplify/storage": "^6.6.9",
     "@aws-amplify/ui-react": "^6.5.3",
     "@aws-amplify/ui-react-storage": "^3.3.7",
     "@aws-sdk/client-cognito-identity-provider": "^3.670.0",

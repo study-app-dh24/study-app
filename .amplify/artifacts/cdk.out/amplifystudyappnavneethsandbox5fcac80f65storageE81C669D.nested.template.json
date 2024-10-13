@@ -1,7 +1,7 @@
 {
  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"AmplifySandbox\",\"createdWith\":\"1.2.1\",\"stackType\":\"storage-S3\",\"metadata\":{}}",
  "Resources": {
-  "amplifyTeamDriveBucket28B5C701": {
+  "firstBucketB40A1E24": {
    "Type": "AWS::S3::Bucket",
    "Properties": {
     "CorsConfiguration": {
@@ -37,7 +37,7 @@
      },
      {
       "Key": "amplify:friendly-name",
-      "Value": "amplifyTeamDrive"
+      "Value": "firstBucket"
      },
      {
       "Key": "aws-cdk:auto-delete-objects",
@@ -52,14 +52,14 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/amplifyTeamDrive/Bucket/Resource"
+    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/Resource"
    }
   },
-  "amplifyTeamDriveBucketPolicy20828FCE": {
+  "firstBucketPolicy3683FCB1": {
    "Type": "AWS::S3::BucketPolicy",
    "Properties": {
     "Bucket": {
-     "Ref": "amplifyTeamDriveBucket28B5C701"
+     "Ref": "firstBucketB40A1E24"
     },
     "PolicyDocument": {
      "Statement": [
@@ -77,7 +77,7 @@
        "Resource": [
         {
          "Fn::GetAtt": [
-          "amplifyTeamDriveBucket28B5C701",
+          "firstBucketB40A1E24",
           "Arn"
          ]
         },
@@ -87,7 +87,7 @@
           [
            {
             "Fn::GetAtt": [
-             "amplifyTeamDriveBucket28B5C701",
+             "firstBucketB40A1E24",
              "Arn"
             ]
            },
@@ -116,7 +116,7 @@
        "Resource": [
         {
          "Fn::GetAtt": [
-          "amplifyTeamDriveBucket28B5C701",
+          "firstBucketB40A1E24",
           "Arn"
          ]
         },
@@ -126,7 +126,7 @@
           [
            {
             "Fn::GetAtt": [
-             "amplifyTeamDriveBucket28B5C701",
+             "firstBucketB40A1E24",
              "Arn"
             ]
            },
@@ -141,10 +141,10 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/amplifyTeamDrive/Bucket/Policy/Resource"
+    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/Policy/Resource"
    }
   },
-  "amplifyTeamDriveBucketAutoDeleteObjectsCustomResource671F9F2A": {
+  "firstBucketAutoDeleteObjectsCustomResourceAAAF3012": {
    "Type": "Custom::S3AutoDeleteObjects",
    "Properties": {
     "ServiceToken": {
@@ -154,16 +154,16 @@
      ]
     },
     "BucketName": {
-     "Ref": "amplifyTeamDriveBucket28B5C701"
+     "Ref": "firstBucketB40A1E24"
     }
    },
    "DependsOn": [
-    "amplifyTeamDriveBucketPolicy20828FCE"
+    "firstBucketPolicy3683FCB1"
    ],
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/amplifyTeamDrive/Bucket/AutoDeleteObjectsCustomResource/Default"
+    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/AutoDeleteObjectsCustomResource/Default"
    }
   },
   "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092": {
@@ -224,7 +224,7 @@
       [
        "Lambda function for auto-deleting objects in ",
        {
-        "Ref": "amplifyTeamDriveBucket28B5C701"
+        "Ref": "firstBucketB40A1E24"
        },
        " S3 bucket."
       ]
@@ -240,44 +240,84 @@
     "aws:asset:property": "Code"
    }
   },
-  "AMPLIFYTEAMDRIVEBUCKETNAMEParameterA8101723": {
-   "Type": "AWS::SSM::Parameter",
+  "secondBucketC2B62305": {
+   "Type": "AWS::S3::Bucket",
    "Properties": {
-    "Name": "/amplify/resource_reference/studyapp/navneeth-sandbox-5fcac80f65/AMPLIFY_TEAM_DRIVE_BUCKET_NAME",
-    "Tags": {
-     "amplify:deployment-type": "sandbox",
-     "created-by": "amplify"
+    "CorsConfiguration": {
+     "CorsRules": [
+      {
+       "AllowedHeaders": [
+        "*"
+       ],
+       "AllowedMethods": [
+        "GET",
+        "HEAD",
+        "PUT",
+        "POST",
+        "DELETE"
+       ],
+       "AllowedOrigins": [
+        "*"
+       ],
+       "ExposedHeaders": [
+        "x-amz-server-side-encryption",
+        "x-amz-request-id",
+        "x-amz-id-2",
+        "ETag"
+       ],
+       "MaxAge": 3000
+      }
+     ]
     },
-    "Type": "String",
-    "Value": {
-     "Ref": "amplifyTeamDriveBucket28B5C701"
-    }
+    "Tags": [
+     {
+      "Key": "amplify:deployment-type",
+      "Value": "sandbox"
+     },
+     {
+      "Key": "amplify:friendly-name",
+      "Value": "secondBucket"
+     },
+     {
+      "Key": "aws-cdk:auto-delete-objects",
+      "Value": "true"
+     },
+     {
+      "Key": "created-by",
+      "Value": "amplify"
+     }
+    ]
    },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/AMPLIFY_TEAM_DRIVE_BUCKET_NAMEParameter/Resource"
+    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/Resource"
    }
   },
-  "storageAccess472A5D2AC": {
-   "Type": "AWS::IAM::Policy",
+  "secondBucketPolicy6DB52F5B": {
+   "Type": "AWS::S3::BucketPolicy",
    "Properties": {
+    "Bucket": {
+     "Ref": "secondBucketC2B62305"
+    },
     "PolicyDocument": {
      "Statement": [
       {
-       "Action": "s3:GetObject",
-       "Effect": "Allow",
+       "Action": "s3:*",
+       "Condition": {
+        "Bool": {
+         "aws:SecureTransport": "false"
+        }
+       },
+       "Effect": "Deny",
+       "Principal": {
+        "AWS": "*"
+       },
        "Resource": [
         {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "amplifyTeamDriveBucket28B5C701",
-             "Arn"
-            ]
-           },
-           "/profile-pictures/*"
-          ]
+         "Fn::GetAtt": [
+          "secondBucketC2B62305",
+          "Arn"
          ]
         },
         {
@@ -286,66 +326,100 @@
           [
            {
             "Fn::GetAtt": [
-             "amplifyTeamDriveBucket28B5C701",
+             "secondBucketC2B62305",
              "Arn"
             ]
            },
-           "/picture-submissions/*"
+           "/*"
           ]
          ]
         }
        ]
       },
       {
-       "Action": "s3:ListBucket",
-       "Condition": {
-        "StringLike": {
-         "s3:prefix": [
-          "profile-pictures/*",
-          "profile-pictures/",
-          "picture-submissions/*",
-          "picture-submissions/"
+       "Action": [
+        "s3:PutBucketPolicy",
+        "s3:GetBucket*",
+        "s3:List*",
+        "s3:DeleteObject*"
+       ],
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": {
+         "Fn::GetAtt": [
+          "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+          "Arn"
          ]
         }
        },
-       "Effect": "Allow",
-       "Resource": {
-        "Fn::GetAtt": [
-         "amplifyTeamDriveBucket28B5C701",
-         "Arn"
-        ]
-       }
-      },
-      {
-       "Action": "s3:PutObject",
-       "Effect": "Allow",
-       "Resource": {
-        "Fn::Join": [
-         "",
-         [
-          {
-           "Fn::GetAtt": [
-            "amplifyTeamDriveBucket28B5C701",
-            "Arn"
-           ]
-          },
-          "/picture-submissions/*"
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "secondBucketC2B62305",
+          "Arn"
          ]
-        ]
-       }
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "secondBucketC2B62305",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
       }
      ],
      "Version": "2012-10-17"
-    },
-    "PolicyName": "storageAccess472A5D2AC",
-    "Roles": [
-     {
-      "Ref": "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref"
-     }
-    ]
+    }
    },
    "Metadata": {
-    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/storageAccess4/Resource"
+    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/Policy/Resource"
+   }
+  },
+  "secondBucketAutoDeleteObjectsCustomResource35C25A59": {
+   "Type": "Custom::S3AutoDeleteObjects",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+      "Arn"
+     ]
+    },
+    "BucketName": {
+     "Ref": "secondBucketC2B62305"
+    }
+   },
+   "DependsOn": [
+    "secondBucketPolicy6DB52F5B"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/AutoDeleteObjectsCustomResource/Default"
+   }
+  },
+  "SECONDBUCKETBUCKETNAMEParameterB27252C9": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/amplify/resource_reference/studyapp/navneeth-sandbox-5fcac80f65/SECOND_BUCKET_BUCKET_NAME",
+    "Tags": {
+     "amplify:deployment-type": "sandbox",
+     "created-by": "amplify"
+    },
+    "Type": "String",
+    "Value": {
+     "Ref": "secondBucketC2B62305"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/SECOND_BUCKET_BUCKET_NAMEParameter/Resource"
    }
   },
   "storageAccess524979CAB": {
@@ -356,53 +430,35 @@
       {
        "Action": "s3:GetObject",
        "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "amplifyTeamDriveBucket28B5C701",
-             "Arn"
-            ]
-           },
-           "/profile-pictures/${cognito-identity.amazonaws.com:sub}/*"
-          ]
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "secondBucketC2B62305",
+            "Arn"
+           ]
+          },
+          "/private/${cognito-identity.amazonaws.com:sub}/*"
          ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "amplifyTeamDriveBucket28B5C701",
-             "Arn"
-            ]
-           },
-           "/picture-submissions/*"
-          ]
-         ]
-        }
-       ]
+        ]
+       }
       },
       {
        "Action": "s3:ListBucket",
        "Condition": {
         "StringLike": {
          "s3:prefix": [
-          "profile-pictures/${cognito-identity.amazonaws.com:sub}/*",
-          "profile-pictures/${cognito-identity.amazonaws.com:sub}/",
-          "picture-submissions/*",
-          "picture-submissions/"
+          "private/${cognito-identity.amazonaws.com:sub}/*",
+          "private/${cognito-identity.amazonaws.com:sub}/"
          ]
         }
        },
        "Effect": "Allow",
        "Resource": {
         "Fn::GetAtt": [
-         "amplifyTeamDriveBucket28B5C701",
+         "secondBucketC2B62305",
          "Arn"
         ]
        }
@@ -410,36 +466,20 @@
       {
        "Action": "s3:PutObject",
        "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "amplifyTeamDriveBucket28B5C701",
-             "Arn"
-            ]
-           },
-           "/profile-pictures/${cognito-identity.amazonaws.com:sub}/*"
-          ]
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "secondBucketC2B62305",
+            "Arn"
+           ]
+          },
+          "/private/${cognito-identity.amazonaws.com:sub}/*"
          ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "amplifyTeamDriveBucket28B5C701",
-             "Arn"
-            ]
-           },
-           "/picture-submissions/*"
-          ]
-         ]
-        }
-       ]
+        ]
+       }
       },
       {
        "Action": "s3:DeleteObject",
@@ -450,11 +490,11 @@
          [
           {
            "Fn::GetAtt": [
-            "amplifyTeamDriveBucket28B5C701",
+            "secondBucketC2B62305",
             "Arn"
            ]
           },
-          "/profile-pictures/${cognito-identity.amazonaws.com:sub}/*"
+          "/private/${cognito-identity.amazonaws.com:sub}/*"
          ]
         ]
        }
@@ -875,17 +915,19 @@
   }
  },
  "Parameters": {
-  "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref": {
-   "Type": "String"
-  },
   "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef": {
    "Type": "String"
   }
  },
  "Outputs": {
-  "amplifystudyappnavneethsandbox5fcac80f65storageamplifyTeamDriveBucketED6A22CFRef": {
+  "amplifystudyappnavneethsandbox5fcac80f65storagefirstBucket254644D6Ref": {
    "Value": {
-    "Ref": "amplifyTeamDriveBucket28B5C701"
+    "Ref": "firstBucketB40A1E24"
+   }
+  },
+  "amplifystudyappnavneethsandbox5fcac80f65storagesecondBucket0F9CDC01Ref": {
+   "Value": {
+    "Ref": "secondBucketC2B62305"
    }
   }
  }

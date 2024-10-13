@@ -585,11 +585,6 @@
    "Value": {
     "Ref": "amplifyAuthauthenticatedUserRoleD8DA3689"
    }
-  },
-  "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthunauthenticatedUserRoleCE6F3525Ref": {
-   "Value": {
-    "Ref": "amplifyAuthunauthenticatedUserRole2B524D9E"
-   }
   }
  }
 }

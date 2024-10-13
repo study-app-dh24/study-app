@@ -8,10 +8,19 @@ import outputs from "../amplify_outputs.json";
 import Profile from "./components/profile";
 import PeerConnect from "./components/peerConnect";
 import { View } from "@aws-amplify/ui-react";
+import { FileUploader } from '@aws-amplify/ui-react-storage';
+import '@aws-amplify/ui-react/styles.css';
+
 
 const configureAmplify = () => {
   Amplify.configure(outputs);
 };
+
+const handleUploadSuccess = (result: any) => {
+  console.log('File uploaded:', result);
+};
+
+
 
 const formFields = {
   signUp: {
@@ -74,6 +83,14 @@ export default function Home() {
           <PeerConnect />
         </div>
       </div>
+      <FileUploader
+      acceptedFileTypes={['image/*']}
+      path="public/"
+      maxFileCount={1}
+      isResumable
+      onUploadSuccess={handleUploadSuccess}
+    />
+
       {/* <VideoSearch /> */}
       {/* <NotesGenerator /> */}
     </main>
