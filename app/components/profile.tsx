@@ -1,8 +1,9 @@
 'use client'
 
 import React, { useEffect, useState } from "react";
-import { Modal, ModalContent, ModalHeader, ModalBody, Button, ModalFooter, useDisclosure } from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, Button, ModalFooter, useDisclosure, Dropdown, DropdownItem, DropdownTrigger, DropdownMenu } from "@nextui-org/react";
 import { TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Avatar} from "@mui/material";
+import { signOut } from 'aws-amplify/auth';
 
 interface UserInfo {
   name: string;
@@ -69,17 +70,30 @@ export default function Profile() {
       // TODO: update the profile
       onClose();
     }
-  }
+  };
+
+  async function handleSignOut() {
+    await signOut();
+  };
 
   return (
     <>
     <div className="flex flex-row items-center gap-2">
       <div> {user.name} </div>
-        <Avatar
-          className="w-8 h-8 text-lg hover:cursor-pointer hover:scale-110"
-          onClick={onOpen}
-          alt=''
-        />
+        <Dropdown className="bg-carbon rounded-xl">
+        <DropdownTrigger>
+          <Avatar
+            className="w-5/6 h-8 text-lg hover:cursor-pointer hover:scale-110"
+            alt=''
+            // TODO: Insert pfp
+            sx={{ width: 24, height: 24 }}
+          />
+        </DropdownTrigger>
+        <DropdownMenu>
+          <DropdownItem onClick={onOpen}> Edit Profile </DropdownItem>
+          <DropdownItem className="text-danger" color="danger" onClick={handleSignOut}> Sign Out </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
     </div>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent className="bg-silk rounded-3xl border-solid border-black border-2 text-black">
@@ -90,9 +104,11 @@ export default function Profile() {
               <ModalBody className="text-black flex relative items-center">
                 <div className="flex-shrink-0 mb-4 relative">
                   <Avatar
-                    className="w-32 h-32 mr-4 hover:cursor-pointer"
+                    className="w-48 h-48 mr-4 hover:cursor-pointer"
                     alt=""
                     onClick={pictureChange}
+                    // TODO: Insert pfp
+                    sx={{ width: 64, height: 64 }}
                   />
                 </div>
                 <div className="flex flex-col gap-4 w-full">
