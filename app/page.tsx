@@ -5,15 +5,12 @@ import { Authenticator } from '@aws-amplify/ui-react';
 import { Amplify } from 'aws-amplify';
 import '@aws-amplify/ui-react/styles.css';
 import outputs from "../amplify_outputs.json";
-import Profile from "./components/profile";
 import PeerConnect from "./components/peerConnect";
-import Image from "next/image";
-import menturaLogo from "@/app/public/mentura_logo_tp.png";
 import Courses from "./components/courses";
 import { fetchUserAttributes, FetchUserAttributesOutput } from 'aws-amplify/auth';
 import { Typewriter } from 'react-simple-typewriter';
 import { View } from "@aws-amplify/ui-react";
-import { FileUploader } from '@aws-amplify/ui-react-storage';
+// import { FileUploader } from '@aws-amplify/ui-react-storage';
 import '@aws-amplify/ui-react/styles.css';
 import Header from "./components/header";
 
@@ -21,9 +18,9 @@ const configureAmplify = () => {
   Amplify.configure(outputs);
 };
 
-const handleUploadSuccess = () => {
-  console.log('File uploaded:');
-};
+// const handleUploadSuccess = () => {
+//   console.log('File uploaded:');
+// };
 
 const formFields = {
   signUp: {
