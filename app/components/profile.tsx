@@ -22,6 +22,7 @@ function Profile() {
   const [name, setName] = useState('');
   const [linkedin, setLinkedin] = useState('');
   const [privacy, setPrivacy] = useState('');
+  const [picture, setPicture] = useState('');
 
   async function getUserAttributes() {
     try {
@@ -38,9 +39,11 @@ function Profile() {
 
   useEffect(() => {
     if (attributes) {
+      console.log(attributes);
       setName(attributes?.name || 'Default Name'); // Set a default value if name is undefined or null
       setLinkedin(attributes?.website || 'https://linkedin.com'); // Set a default value if LinkedIn is undefined or null
       setPrivacy(attributes?.['custom:privacy'] || "public");
+      setPicture(attributes?.['custom:picture'] || 'http://www.gravatar.com/avatar/?d=mp');
     }
   }, [attributes]);
 
@@ -99,7 +102,7 @@ function Profile() {
           <Avatar
             className="w-8 h-8 text-lg transition-transform duration-200 hover:cursor-pointer hover:scale-110"
             alt=''
-            src='http://www.gravatar.com/avatar/?d=mp'
+            src={picture}
           />
         </DropdownTrigger>
         <DropdownMenu>
@@ -119,7 +122,7 @@ function Profile() {
                 <Avatar
                   className="w-24 h-24 text-lg hover:cursor-pointer hover:cursor-pointer"
                   alt=''
-                  src='http://www.gravatar.com/avatar/?d=mp'
+                  src={picture}
                 />
                 </div>
                 <div className="flex flex-col gap-4 w-full">

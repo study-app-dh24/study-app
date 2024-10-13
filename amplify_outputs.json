@@ -1,14 +1,12 @@
 {
   "auth": {
-    "user_pool_id": "us-east-2_SgucS6qYy",
+    "user_pool_id": "us-east-2_WeDJVsW1I",
     "aws_region": "us-east-2",
-    "user_pool_client_id": "1lpvg5jejjnd3r8eji8o48ei2d",
-    "identity_pool_id": "us-east-2:bbfdf55f-540e-40ea-bada-060113c569ef",
+    "user_pool_client_id": "6i60hls1cibr62ce9jvadle86a",
+    "identity_pool_id": "us-east-2:a294e601-4df0-45e8-8d38-ab8e0db8fd39",
     "mfa_methods": [],
     "standard_required_attributes": [
-      "email",
-      "website",
-      "name"
+      "email"
     ],
     "username_attributes": [
       "email"
@@ -28,16 +26,16 @@
   },
   "storage": {
     "aws_region": "us-east-2",
-    "bucket_name": "amplify-studyapp-williamong-sa-firstbucketb40a1e24-pjn5cywohddr",
+    "bucket_name": "amplify-studyapp-williamong-sa-firstbucketb40a1e24-olrzwak82fg8",
     "buckets": [
       {
         "name": "firstBucket",
-        "bucket_name": "amplify-studyapp-williamong-sa-firstbucketb40a1e24-pjn5cywohddr",
+        "bucket_name": "amplify-studyapp-williamong-sa-firstbucketb40a1e24-olrzwak82fg8",
         "aws_region": "us-east-2"
       },
       {
         "name": "secondBucket",
-        "bucket_name": "amplify-studyapp-williamong-s-secondbucketc2b62305-evnekuk2srop",
+        "bucket_name": "amplify-studyapp-williamong-s-secondbucketc2b62305-khyfdhmush5u",
         "aws_region": "us-east-2",
         "paths": {
           "private/${cognito-identity.amazonaws.com:sub}/*": {
