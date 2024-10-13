@@ -1,3 +1,5 @@
+'use client'
+
 // components/NotesGenerator.tsx
 import { useState } from 'react';
 import axios from 'axios';
@@ -48,7 +50,7 @@ const NotesGenerator = () => {
   };
 
   return (
-    <div>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
       <h1>Notes Generator</h1>
       <input
         type="text"
