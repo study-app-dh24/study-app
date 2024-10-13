@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 html, body {
-  background-color: #b7b3b3;
+  /* background-color: #fefefe; */
+  background-color: #333333;
   overscroll-behavior: none;
+  scroll-behavior: smooth;
+  font-family: "Viga", sans-serif;
+  color: #39275B;
+}
+
+.peer-connect {
+  background-color: #dfd5f3;
+  opacity: 20;
 }

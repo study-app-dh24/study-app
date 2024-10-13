@@ -4,13 +4,13 @@
     "id": "App",
     "path": "",
     "children": {
-      "amplify-studyapp-navneeth-sandbox-5fcac80f65": {
-        "id": "amplify-studyapp-navneeth-sandbox-5fcac80f65",
-        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65",
+      "amplify-studyapp-williamong-sandbox-0bf4552c6e": {
+        "id": "amplify-studyapp-williamong-sandbox-0bf4552c6e",
+        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e",
         "children": {
           "deploymentType": {
             "id": "deploymentType",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/deploymentType",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/deploymentType",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -18,7 +18,7 @@
           },
           "region": {
             "id": "region",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/region",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/region",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -26,19 +26,19 @@
           },
           "auth": {
             "id": "auth",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth",
             "children": {
               "amplifyAuth": {
                 "id": "amplifyAuth",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth",
                 "children": {
                   "UserPool": {
                     "id": "UserPool",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/UserPool",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/UserPool",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/UserPool/Resource",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/UserPool/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Cognito::UserPool",
                           "aws:cdk:cloudformation:props": {
@@ -72,6 +72,22 @@
                                 "name": "email",
                                 "mutable": true,
                                 "required": true
+                              },
+                              {
+                                "name": "website",
+                                "mutable": true,
+                                "required": true
+                              },
+                              {
+                                "name": "name",
+                                "mutable": true,
+                                "required": true
+                              },
+                              {
+                                "name": "privacy",
+                                "attributeDataType": "String",
+                                "stringAttributeConstraints": {},
+                                "mutable": true
                               }
                             ],
                             "smsVerificationMessage": "The verification code to your new account is {####}",
@@ -112,11 +128,11 @@
                   },
                   "UserPoolAppClient": {
                     "id": "UserPoolAppClient",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/UserPoolAppClient",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/UserPoolAppClient",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/UserPoolAppClient/Resource",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/UserPoolAppClient/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Cognito::UserPoolClient",
                           "aws:cdk:cloudformation:props": {
@@ -161,7 +177,7 @@
                   },
                   "IdentityPool": {
                     "id": "IdentityPool",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/IdentityPool",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/IdentityPool",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Cognito::IdentityPool",
                       "aws:cdk:cloudformation:props": {
@@ -212,11 +228,11 @@
                   },
                   "authenticatedUserRole": {
                     "id": "authenticatedUserRole",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/authenticatedUserRole",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/authenticatedUserRole",
                     "children": {
                       "ImportauthenticatedUserRole": {
                         "id": "ImportauthenticatedUserRole",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/authenticatedUserRole/ImportauthenticatedUserRole",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/authenticatedUserRole/ImportauthenticatedUserRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
                           "version": "2.162.1"
@@ -224,7 +240,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/authenticatedUserRole/Resource",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/authenticatedUserRole/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                           "aws:cdk:cloudformation:props": {
@@ -279,11 +295,11 @@
                   },
                   "unauthenticatedUserRole": {
                     "id": "unauthenticatedUserRole",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/unauthenticatedUserRole",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/unauthenticatedUserRole",
                     "children": {
                       "ImportunauthenticatedUserRole": {
                         "id": "ImportunauthenticatedUserRole",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/unauthenticatedUserRole/ImportunauthenticatedUserRole",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/unauthenticatedUserRole/ImportunauthenticatedUserRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
                           "version": "2.162.1"
@@ -291,7 +307,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/unauthenticatedUserRole/Resource",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/unauthenticatedUserRole/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                           "aws:cdk:cloudformation:props": {
@@ -346,7 +362,7 @@
                   },
                   "IdentityPoolRoleAttachment": {
                     "id": "IdentityPoolRoleAttachment",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifyAuth/IdentityPoolRoleAttachment",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifyAuth/IdentityPoolRoleAttachment",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Cognito::IdentityPoolRoleAttachment",
                       "aws:cdk:cloudformation:props": {
@@ -407,11 +423,11 @@
               },
               "CDKMetadata": {
                 "id": "CDKMetadata",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/CDKMetadata",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/CDKMetadata",
                 "children": {
                   "Default": {
                     "id": "Default",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/CDKMetadata/Default",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/CDKMetadata/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
                       "version": "2.162.1"
@@ -419,7 +435,7 @@
                   },
                   "Condition": {
                     "id": "Condition",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/CDKMetadata/Condition",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/CDKMetadata/Condition",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnCondition",
                       "version": "2.162.1"
@@ -431,33 +447,33 @@
                   "version": "10.4.1"
                 }
               },
-              "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthUserPool6CD4C55ARef": {
-                "id": "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthUserPool6CD4C55ARef",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthUserPool6CD4C55ARef",
+              "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolCA0FDF7ERef": {
+                "id": "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolCA0FDF7ERef",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolCA0FDF7ERef",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
                   "version": "2.162.1"
                 }
               },
-              "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthUserPoolAppClientBA62C766Ref": {
-                "id": "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthUserPoolAppClientBA62C766Ref",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthUserPoolAppClientBA62C766Ref",
+              "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolAppClientC4CF5EACRef": {
+                "id": "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolAppClientC4CF5EACRef",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthUserPoolAppClientC4CF5EACRef",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
                   "version": "2.162.1"
                 }
               },
-              "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthIdentityPool6F00048DRef": {
-                "id": "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthIdentityPool6F00048DRef",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthIdentityPool6F00048DRef",
+              "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthIdentityPoolED5C3400Ref": {
+                "id": "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthIdentityPoolED5C3400Ref",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthIdentityPoolED5C3400Ref",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
                   "version": "2.162.1"
                 }
               },
-              "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef": {
-                "id": "amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth/amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef",
+              "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef": {
+                "id": "amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth/amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
                   "version": "2.162.1"
@@ -471,11 +487,11 @@
           },
           "auth.NestedStack": {
             "id": "auth.NestedStack",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth.NestedStack",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth.NestedStack",
             "children": {
               "auth.NestedStackResource": {
                 "id": "auth.NestedStackResource",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/auth.NestedStack/auth.NestedStackResource",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/auth.NestedStack/auth.NestedStackResource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CloudFormation::Stack",
                   "aws:cdk:cloudformation:props": {
@@ -505,7 +521,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/7f9e5a4c92bd2cd17a838f8641638ec1aa409fd79750e07353f8327de863ceda.json"
+                          "/e810c8fc3924656cf8501cf6ac31bd1cfba36bfc19bdafc65d0bbdea0d7d463e.json"
                         ]
                       ]
                     }
@@ -524,7 +540,7 @@
           },
           "userPoolId": {
             "id": "userPoolId",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/userPoolId",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/userPoolId",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -532,7 +548,7 @@
           },
           "webClientId": {
             "id": "webClientId",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/webClientId",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/webClientId",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -540,7 +556,7 @@
           },
           "identityPoolId": {
             "id": "identityPoolId",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/identityPoolId",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/identityPoolId",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -548,7 +564,7 @@
           },
           "authRegion": {
             "id": "authRegion",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/authRegion",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/authRegion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -556,7 +572,7 @@
           },
           "allowUnauthenticatedIdentities": {
             "id": "allowUnauthenticatedIdentities",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/allowUnauthenticatedIdentities",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/allowUnauthenticatedIdentities",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -564,7 +580,7 @@
           },
           "signupAttributes": {
             "id": "signupAttributes",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/signupAttributes",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/signupAttributes",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -572,7 +588,7 @@
           },
           "usernameAttributes": {
             "id": "usernameAttributes",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/usernameAttributes",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/usernameAttributes",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -580,7 +596,7 @@
           },
           "verificationMechanisms": {
             "id": "verificationMechanisms",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/verificationMechanisms",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/verificationMechanisms",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -588,7 +604,7 @@
           },
           "passwordPolicyMinLength": {
             "id": "passwordPolicyMinLength",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/passwordPolicyMinLength",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/passwordPolicyMinLength",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -596,7 +612,7 @@
           },
           "passwordPolicyRequirements": {
             "id": "passwordPolicyRequirements",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/passwordPolicyRequirements",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/passwordPolicyRequirements",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -604,7 +620,7 @@
           },
           "mfaConfiguration": {
             "id": "mfaConfiguration",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/mfaConfiguration",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/mfaConfiguration",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -612,7 +628,7 @@
           },
           "mfaTypes": {
             "id": "mfaTypes",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/mfaTypes",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/mfaTypes",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -620,7 +636,7 @@
           },
           "socialProviders": {
             "id": "socialProviders",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/socialProviders",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/socialProviders",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -628,7 +644,7 @@
           },
           "oauthCognitoDomain": {
             "id": "oauthCognitoDomain",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthCognitoDomain",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthCognitoDomain",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -636,7 +652,7 @@
           },
           "oauthScope": {
             "id": "oauthScope",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthScope",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthScope",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -644,7 +660,7 @@
           },
           "oauthRedirectSignIn": {
             "id": "oauthRedirectSignIn",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthRedirectSignIn",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthRedirectSignIn",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -652,7 +668,7 @@
           },
           "oauthRedirectSignOut": {
             "id": "oauthRedirectSignOut",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthRedirectSignOut",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthRedirectSignOut",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -660,7 +676,7 @@
           },
           "oauthResponseType": {
             "id": "oauthResponseType",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthResponseType",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthResponseType",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -668,7 +684,7 @@
           },
           "oauthClientId": {
             "id": "oauthClientId",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/oauthClientId",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/oauthClientId",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -676,19 +692,19 @@
           },
           "storage": {
             "id": "storage",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage",
             "children": {
               "firstBucket": {
                 "id": "firstBucket",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/firstBucket",
                 "children": {
                   "Bucket": {
                     "id": "Bucket",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/firstBucket/Bucket",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/Resource",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/firstBucket/Bucket/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                           "aws:cdk:cloudformation:props": {
@@ -745,11 +761,11 @@
                       },
                       "Policy": {
                         "id": "Policy",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/Policy",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/firstBucket/Bucket/Policy",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/Policy/Resource",
+                            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/firstBucket/Bucket/Policy/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
                               "aws:cdk:cloudformation:props": {
@@ -849,11 +865,11 @@
                       },
                       "AutoDeleteObjectsCustomResource": {
                         "id": "AutoDeleteObjectsCustomResource",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/AutoDeleteObjectsCustomResource",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/firstBucket/Bucket/AutoDeleteObjectsCustomResource",
                         "children": {
                           "Default": {
                             "id": "Default",
-                            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/firstBucket/Bucket/AutoDeleteObjectsCustomResource/Default",
+                            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/firstBucket/Bucket/AutoDeleteObjectsCustomResource/Default",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.CfnResource",
                               "version": "2.162.1"
@@ -879,7 +895,7 @@
               },
               "LatestNodeRuntimeMap": {
                 "id": "LatestNodeRuntimeMap",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/LatestNodeRuntimeMap",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/LatestNodeRuntimeMap",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnMapping",
                   "version": "2.162.1"
@@ -887,11 +903,11 @@
               },
               "Custom::S3AutoDeleteObjectsCustomResourceProvider": {
                 "id": "Custom::S3AutoDeleteObjectsCustomResourceProvider",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider",
                 "children": {
                   "Staging": {
                     "id": "Staging",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Staging",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Staging",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
                       "version": "2.162.1"
@@ -899,7 +915,7 @@
                   },
                   "Role": {
                     "id": "Role",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
                       "version": "2.162.1"
@@ -907,7 +923,7 @@
                   },
                   "Handler": {
                     "id": "Handler",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
                       "version": "2.162.1"
@@ -921,15 +937,15 @@
               },
               "secondBucket": {
                 "id": "secondBucket",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/secondBucket",
                 "children": {
                   "Bucket": {
                     "id": "Bucket",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/secondBucket/Bucket",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/Resource",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/secondBucket/Bucket/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                           "aws:cdk:cloudformation:props": {
@@ -986,11 +1002,11 @@
                       },
                       "Policy": {
                         "id": "Policy",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/Policy",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/secondBucket/Bucket/Policy",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/Policy/Resource",
+                            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/secondBucket/Bucket/Policy/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
                               "aws:cdk:cloudformation:props": {
@@ -1090,11 +1106,11 @@
                       },
                       "AutoDeleteObjectsCustomResource": {
                         "id": "AutoDeleteObjectsCustomResource",
-                        "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/AutoDeleteObjectsCustomResource",
+                        "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/secondBucket/Bucket/AutoDeleteObjectsCustomResource",
                         "children": {
                           "Default": {
                             "id": "Default",
-                            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/secondBucket/Bucket/AutoDeleteObjectsCustomResource/Default",
+                            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/secondBucket/Bucket/AutoDeleteObjectsCustomResource/Default",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.CfnResource",
                               "version": "2.162.1"
@@ -1258,11 +1274,11 @@
               },
               "CDKMetadata": {
                 "id": "CDKMetadata",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/CDKMetadata",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/CDKMetadata",
                 "children": {
                   "Default": {
                     "id": "Default",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/CDKMetadata/Default",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/CDKMetadata/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
                       "version": "2.162.1"
@@ -1270,7 +1286,7 @@
                   },
                   "Condition": {
                     "id": "Condition",
-                    "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/CDKMetadata/Condition",
+                    "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/CDKMetadata/Condition",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnCondition",
                       "version": "2.162.1"
@@ -1282,25 +1298,25 @@
                   "version": "10.4.1"
                 }
               },
-              "reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef": {
-                "id": "reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/reference-to-amplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef",
+              "reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef": {
+                "id": "reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/reference-to-amplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnParameter",
                   "version": "2.162.1"
                 }
               },
-              "amplifystudyappnavneethsandbox5fcac80f65storagefirstBucket254644D6Ref": {
-                "id": "amplifystudyappnavneethsandbox5fcac80f65storagefirstBucket254644D6Ref",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/amplifystudyappnavneethsandbox5fcac80f65storagefirstBucket254644D6Ref",
+              "amplifystudyappwilliamongsandbox0bf4552c6estoragefirstBucket05F168F4Ref": {
+                "id": "amplifystudyappwilliamongsandbox0bf4552c6estoragefirstBucket05F168F4Ref",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/amplifystudyappwilliamongsandbox0bf4552c6estoragefirstBucket05F168F4Ref",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
                   "version": "2.162.1"
                 }
               },
-              "amplifystudyappnavneethsandbox5fcac80f65storagesecondBucket0F9CDC01Ref": {
-                "id": "amplifystudyappnavneethsandbox5fcac80f65storagesecondBucket0F9CDC01Ref",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage/amplifystudyappnavneethsandbox5fcac80f65storagesecondBucket0F9CDC01Ref",
+              "amplifystudyappwilliamongsandbox0bf4552c6estoragesecondBucket4C606638Ref": {
+                "id": "amplifystudyappwilliamongsandbox0bf4552c6estoragesecondBucket4C606638Ref",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage/amplifystudyappwilliamongsandbox0bf4552c6estoragesecondBucket4C606638Ref",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
                   "version": "2.162.1"
@@ -1314,19 +1330,19 @@
           },
           "storage.NestedStack": {
             "id": "storage.NestedStack",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage.NestedStack",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage.NestedStack",
             "children": {
               "storage.NestedStackResource": {
                 "id": "storage.NestedStackResource",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storage.NestedStack/storage.NestedStackResource",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storage.NestedStack/storage.NestedStackResource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CloudFormation::Stack",
                   "aws:cdk:cloudformation:props": {
                     "parameters": {
-                      "referencetoamplifystudyappnavneethsandbox5fcac80f65authNestedStackauthNestedStackResource1DBD876COutputsamplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef": {
+                      "referencetoamplifystudyappwilliamongsandbox0bf4552c6eauthNestedStackauthNestedStackResource441DF3EFOutputsamplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef": {
                         "Fn::GetAtt": [
                           "auth179371D7",
-                          "Outputs.amplifystudyappnavneethsandbox5fcac80f65authamplifyAuthauthenticatedUserRoleC4D3732DRef"
+                          "Outputs.amplifystudyappwilliamongsandbox0bf4552c6eauthamplifyAuthauthenticatedUserRole456C478CRef"
                         ]
                       }
                     },
@@ -1356,7 +1372,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/3ba25ecbc45dbfe8c34642d61b118134b20275590949de20535d605225a04332.json"
+                          "/3889bf5490dd97fa4df8329a95660dad8869c63e972e605219ce7d801d3702f9.json"
                         ]
                       ]
                     }
@@ -1375,7 +1391,7 @@
           },
           "storageRegion": {
             "id": "storageRegion",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/storageRegion",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/storageRegion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -1383,7 +1399,7 @@
           },
           "bucketName": {
             "id": "bucketName",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/bucketName",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/bucketName",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -1391,7 +1407,7 @@
           },
           "buckets": {
             "id": "buckets",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/buckets",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/buckets",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.162.1"
@@ -1399,11 +1415,11 @@
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/CDKMetadata",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/CDKMetadata/Default",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.162.1"
@@ -1411,7 +1427,7 @@
               },
               "Condition": {
                 "id": "Condition",
-                "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/CDKMetadata/Condition",
+                "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/CDKMetadata/Condition",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnCondition",
                   "version": "2.162.1"
@@ -1425,7 +1441,7 @@
           },
           "BootstrapVersion": {
             "id": "BootstrapVersion",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/BootstrapVersion",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
               "version": "2.162.1"
@@ -1433,7 +1449,7 @@
           },
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
-            "path": "amplify-studyapp-navneeth-sandbox-5fcac80f65/CheckBootstrapVersion",
+            "path": "amplify-studyapp-williamong-sandbox-0bf4552c6e/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.162.1"

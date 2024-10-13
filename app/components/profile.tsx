@@ -2,12 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, Button, ModalFooter, useDisclosure, Dropdown, DropdownItem, DropdownTrigger, DropdownMenu } from "@nextui-org/react";
-// import { TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from "@mui/material";
-import { TextField } from "@mui/material";
+import { TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Avatar } from "@mui/material";
 import { signOut } from 'aws-amplify/auth';
 import { fetchUserAttributes, updateUserAttributes, FetchUserAttributesOutput } from 'aws-amplify/auth';
-import placeholderImg from '@/app/public/placeholder-pfp.svg';
-import Image from "next/image";
 
 // interface AuthUser {
 //   userId?: string;
@@ -24,7 +21,7 @@ function Profile() {
 
   const [name, setName] = useState('');
   const [linkedin, setLinkedin] = useState('');
-  // const [privacy, setPrivacy] = useState('');
+  const [privacy, setPrivacy] = useState('');
 
   async function getUserAttributes() {
     try {
@@ -43,6 +40,7 @@ function Profile() {
     if (attributes) {
       setName(attributes?.name || 'Default Name'); // Set a default value if name is undefined or null
       setLinkedin(attributes?.website || 'https://linkedin.com'); // Set a default value if LinkedIn is undefined or null
+      setPrivacy(attributes?.['custom:privacy'] || "public");
     }
   }, [attributes]);
 
@@ -58,9 +56,9 @@ function Profile() {
     setLinkedin(event.target.value);
   };
 
-  // const privacyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   setPrivacy(event.target.value);
-  // };
+  const privacyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPrivacy(event.target.value);
+  };
 
   const handleSave = async () => {
     if (name.length !== 0 && linkedin.length !== 0) {
@@ -69,7 +67,7 @@ function Profile() {
           userAttributes: {
             name: name,
             website: linkedin,
-            // 'custom:privacy': privacy,
+            'custom:privacy': privacy,
           },
         });
         console.log('Attributes updated successfully:', result);
@@ -95,13 +93,13 @@ function Profile() {
   return (
     <>
     <div className="flex flex-row items-center gap-2">
-      <div className="text-lg"> {attributes?.name} </div>
+      <div className="text-xl"> {attributes?.name} </div>
         <Dropdown className="bg-carbon rounded-xl">
         <DropdownTrigger>
-          <Image
+          <Avatar
             className="w-8 h-8 text-lg transition-transform duration-200 hover:cursor-pointer hover:scale-110"
             alt=''
-            src={placeholderImg}
+            src='http://www.gravatar.com/avatar/?d=mp'
           />
         </DropdownTrigger>
         <DropdownMenu>
@@ -118,16 +116,16 @@ function Profile() {
 
               <ModalBody className="text-black flex relative items-center">
                 <div className="flex-shrink-0 mb-4 relative">
-                <Image
+                <Avatar
                   className="w-24 h-24 text-lg hover:cursor-pointer hover:cursor-pointer"
                   alt=''
-                  src={placeholderImg}
+                  src='http://www.gravatar.com/avatar/?d=mp'
                 />
                 </div>
                 <div className="flex flex-col gap-4 w-full">
                   <TextField label="Name" value={name} variant="outlined" onChange={nameChange}/>
                   <TextField label="LinkedIn" value={linkedin} variant="outlined" onChange={linkedinChange} />
-                  {/* <FormControl>
+                  <FormControl>
                     <FormLabel> Privacy </FormLabel>
                     <RadioGroup
                       value={privacy}
@@ -136,7 +134,7 @@ function Profile() {
                       <FormControlLabel value="private" control={<Radio />} label="Private" />
                       <FormControlLabel value="public" control={<Radio />} label="Public" />
                     </RadioGroup>
-                  </FormControl> */}
+                  </FormControl>
                 </div>
               </ModalBody>
 
