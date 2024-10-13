@@ -5,7 +5,7 @@ import { Modal, ModalContent, ModalHeader, ModalBody, Button, ModalFooter, useDi
 // import { TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Avatar} from "@mui/material";
 import { TextField } from "@mui/material";
 import { signOut } from 'aws-amplify/auth';
-import { fetchUserAttributes, updateUserAttributes } from 'aws-amplify/auth';
+import { fetchUserAttributes, updateUserAttributes, FetchUserAttributesOutput } from 'aws-amplify/auth';
 import placeholderImg from '@/app/public/placeholder-pfp.svg';
 import Image from "next/image";
 
@@ -18,13 +18,9 @@ interface AuthUser {
   };
 }
 
-interface ProfileProps {
-  user?: AuthUser;
-}
-
-function Profile({ user }: ProfileProps) {
+function Profile() {
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
-  const [attributes, setAttributes] = useState<Record<string, any> | null>(null);
+  const [attributes, setAttributes] = useState<FetchUserAttributesOutput>();
 
   const [name, setName] = useState('');
   const [linkedin, setLinkedin] = useState('');
@@ -53,9 +49,9 @@ function Profile({ user }: ProfileProps) {
     setName(event.target.value);
   };
 
-  const pictureChange = () => {
-    // TODO: Picture change
-  };
+  // const pictureChange = () => {
+  //   // TODO: Picture change
+  // };
 
   const linkedinChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLinkedin(event.target.value);

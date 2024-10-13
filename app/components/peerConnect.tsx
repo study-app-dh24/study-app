@@ -1,11 +1,11 @@
 import {User, Link} from "@nextui-org/react";
-import { UserType, AttributeType } from '@aws-sdk/client-cognito-identity-provider';
+import { UserType } from '@aws-sdk/client-cognito-identity-provider';
 
 interface User extends Omit<UserType, 'Attributes'> {
   Attributes?: { Name: string; Value: string }[];
 }
 
-import React, { useState, useEffect, use } from 'react';
+import React, { useState, useEffect } from 'react';
 import { fetchAuthSession } from 'aws-amplify/auth';
 import { CognitoIdentityProviderClient, ListUsersCommand } from '@aws-sdk/client-cognito-identity-provider';
 

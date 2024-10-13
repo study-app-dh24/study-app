@@ -60,7 +60,7 @@ export default function Home() {
         </div>
 
         <div className="ml-auto pr-8">
-          <Profile user={user}/>
+          <Profile />
         </div>
       </div>
 
