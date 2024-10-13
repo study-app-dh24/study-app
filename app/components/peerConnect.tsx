@@ -34,8 +34,8 @@ const UserList: React.FC = () => {
       const client = new CognitoIdentityProviderClient({
         region: 'us-east-2',
         credentials: {
-          accessKeyId: 'AKIA4DMVQG6VG7FLLL2E',
-          secretAccessKey: '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'
+          accessKeyId: process.env.AMPLIFY_ACCESS_KEY as string,
+          secretAccessKey: process.env.AMPLIFY_SECRET_KEY as string,
         }
       });
 
