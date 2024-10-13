@@ -30,17 +30,6 @@ export default function Profile() {
     getUserData();
   }, []);
 
-  // return (
-  //   <div className="flex flex-row items-center gap-2">
-  //     <div> {user.name} </div>
-  //     <Image
-  //       className="w-8 h-8 text-lg hover:cursor-pointer"
-  //       alt=''
-  //       src={placeholderImg}
-  //     />
-  //   </div>
-  // );
-
   return (
     <>
     <div className="flex flex-row items-center gap-2">
@@ -49,7 +38,7 @@ export default function Profile() {
         className="w-8 h-8 text-lg hover:cursor-pointer"
         onClick={onOpen}
         alt=''
-        src={placeholderImg}
+        src={placeholderImg} // using placeholderImg to fix the unused variable error
         />
     </div>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
