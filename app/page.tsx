@@ -44,12 +44,6 @@ export default function Home() {
       )}
     </Authenticator>
 
-      <FileUploader
-        acceptedFileTypes={['image/*']}
-        path="public/"
-        maxFileCount={1}
-        isResumable
-      />
 
     </View>
   
