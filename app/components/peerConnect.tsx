@@ -5,6 +5,7 @@ interface CustomUser extends Omit<UserType, 'Attributes'> {
   Attributes?: { Name: string; Value: string }[]; // Adjust this as per the returned type
   fullName?: string;
   website?: string;
+  privacy?: string;
 }
 
 import React, { useState, useEffect } from 'react';
@@ -30,13 +31,13 @@ const UserList: React.FC = () => {
       const client = new CognitoIdentityProviderClient({
         region: 'us-east-2',
         credentials: {
-          accessKeyId: process.env.AMPLIFY_ACCESS_KEY as string,
-          secretAccessKey: process.env.AMPLIFY_SECRET_KEY as string,
+          accessKeyId: 'AKIA4DMVQG6VG7FLLL2E',
+          secretAccessKey: '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',
         }
       });
 
       const command = new ListUsersCommand({
-        UserPoolId: process.env.USER_POOL_ID as string,
+        UserPoolId: 'us-east-2_QNU7Mq4pg',
         Limit: 60
       });
 
@@ -55,11 +56,15 @@ const UserList: React.FC = () => {
           ...user,
           Attributes: user.Attributes,
           fullName: attributes?.['name'] || 'N/A',
-          website: attributes?.['website'] || 'N/A'
+          website: attributes?.['website'] || 'N/A',
+          privacy: attributes?.['custom:privacy'] || 'N/A'
         } as CustomUser; // Type assertion here
       });
 
-      setUsers(transformedUsers);
+      // TODO: remove (for debugging)
+      const duplicateUsers = transformedUsers.concat(transformedUsers).concat(transformedUsers).concat(transformedUsers).concat(transformedUsers).concat(transformedUsers);
+      // setUsers(transformedUsers);
+      setUsers(duplicateUsers);
     } catch (error) {
       console.error('Error listing users:', error);
     }
@@ -67,25 +72,27 @@ const UserList: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-4 p-4 pb-8 items-start gap-16">
-      {users.map((user) => (
-        <div
-          key={user.fullName}
-          className="bg-gray-400 rounded-3xl p-2 flex items-center w-full"
-        >
-          <User
-            key={user.fullName}
-            name={user.fullName}
-            description={
-              <Link href={user.website} size="sm" isExternal>
-                {"@" + (user.website)?.replace(/.*\/([^\/]+)\/?$/, '$1')}
-              </Link>
-            }
-            avatarProps={{
-              src: "https://avatars.githubusercontent.com/u/30373425?v=4"
-            }}
-          />
-        </div>
-      ))}
+      {users
+        .filter(user => user.privacy !== "private") // Filter out users with privacy set to "false"
+        .map((user, index) => ( // Use index instead of i++ for the key
+          <div
+            key={index}
+            className="bg-beige rounded-3xl p-2 flex items-center w-full"
+          >
+            <User
+              key={user.fullName}
+              name={user.fullName}
+              description={
+                <Link href={user.website} size="sm" isExternal>
+                  {"@" + (user.website)?.replace(/.*\/([^\/]+)\/?$/, '$1')}
+                </Link>
+              }
+              avatarProps={{
+                src: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+              }}
+            />
+          </div>
+        ))}
     </div>
   );
 };
