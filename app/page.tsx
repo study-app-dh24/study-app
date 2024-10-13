@@ -7,7 +7,6 @@ import { Amplify } from 'aws-amplify';
 import outputs from "../amplify_outputs.json";
 import Profile from "./components/profile";
 import '@aws-amplify/ui-react/styles.css';
-import { View } from "@aws-amplify/ui-react";
 
 const configureAmplify = () => {
   Amplify.configure(outputs);
@@ -19,8 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <View>
-          <Authenticator>
+    <Authenticator>
       {() => (
         <main>
             {/* TODO: Change colors if needed */}
@@ -29,22 +27,26 @@ export default function Home() {
               [logo] [app_name]
             </div>
 
-            <div className="mr-auto ml-auto px-4 flex flex-row gap-6">
-              <a href="#" className="hover:text-light_purple"> Home </a>
-              <a href="your_courses" className="hover:text-light_purple"> Your Courses </a>
-              <a href="peer_connect" className="hover:text-light_purple"> Peer Connect </a>
-            </div>
+        <div className="mr-auto ml-auto px-4 flex flex-row gap-6">
+          <a href="#" className="hover:text-light_purple"> Home </a>
+          <div> | </div>
+          <a href="your_courses" className="hover:text-light_purple"> Your Courses </a>
+        </div>
 
-            <div className="ml-auto pr-8">
-              <Profile />
-            </div>
-          </div>
-        </main>
-      )}
+        <div className="ml-auto pr-8">
+          <Profile />
+        </div>
+      </div>
+
+      <div className="flex flex-col w-7/12 bg-silk overflow-hidden gap-64">
+        {/* TODO: courses */}
+      </div>
+
+      <div className="flex flex-col w-5/12 bg-light_purple overflow-y-auto gap-64 ">
+        {/* TODO: peer connect */}
+      </div>
+    </main>
+    )}
     </Authenticator>
-
-
-    </View>
-  
   );
 }
