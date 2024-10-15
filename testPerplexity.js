@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const PERPLEXITY_API_URL = 'https://api.perplexity.ai/chat/completions'; // Ensure this is the correct URL
-const API_KEY = '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'; // Your API key
+const API_KEY = ''; // Your API key
 const TOPIC = 'Lines and Tangents'; // Your desired topic
 
 
